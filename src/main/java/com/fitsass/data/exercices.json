@@ -1,0 +1,22 @@
+[
+  {
+    "name": "Squat",
+    "difficulty": "Intermediate",
+    "type": "Strength"
+  },
+  {
+    "name": "Jogging",
+    "difficulty": "Beginner",
+    "type": "Cardio"
+  },
+  {
+    "name": "Push-up",
+    "difficulty": "Intermediate",
+    "type": "Strength"
+  },
+  {
+    "name": "Plank",
+    "difficulty": "Advanced",
+    "type": "Core"
+  }
+]
