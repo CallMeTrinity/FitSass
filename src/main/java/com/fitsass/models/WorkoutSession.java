@@ -2,28 +2,29 @@ package com.fitsass.models;
 
 import com.fitsass.enums.MuscleGroup;
 import com.fitsass.enums.WorkoutType;
-import com.fitsass.loader.ExerciseLoader;
 
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class WorkoutSession {
-    private String name;
+    private final String name;
+    private final List<Exercise> exercises;
     private WorkoutType type;
-    private List<Exercise> exercise;
 
-    public WorkoutSession(String name, WorkoutType type, List<Exercise> exercise) {
+    public WorkoutSession(String name, WorkoutType type) {
         this.name = name;
         this.type = type;
-        this.exercise = exercise;
+        this.exercises = new ArrayList<>();
     }
 
     public void addExercise(Exercise exercise) {
-        this.exercise.add(exercise);
+        this.exercises.add(exercise);
     }
 
     public void printWorkoutSession() {
         System.out.println(this.name + " : " + type);
-        for (Exercise exercise : exercise) {
+        for (Exercise exercise : exercises) {
             exercise.printExercise();
         }
     }
@@ -36,15 +37,24 @@ public class WorkoutSession {
         this.type = type;
     }
 
-    public void generateSession(List<Exercise> exercises,List<MuscleGroup> muscleGroups, int numberOfExercises) {
+    public void generateSession(List<MuscleGroup> muscleGroups, int numberOfExercises, List<Exercise> exercises) {
         for (MuscleGroup muscleGroup : muscleGroups) {
-            for (int i = 0; i < numberOfExercises; i++) {
-                for (Exercise exercise : exercises) {
-                    if (exercise.getMainMuscleGroup().equals(muscleGroup)) {
-                        addExercise(exercise);
-                    }
+            List<Exercise> filteredExercises = new ArrayList<>();
+            for (Exercise exercise : exercises) {
+                if (exercise.getMainMuscleGroup().equals(muscleGroup)) {
+                    filteredExercises.add(exercise);
                 }
+            }
+
+            Collections.shuffle(filteredExercises);
+
+            for (int i = 0; i < Math.min(numberOfExercises, filteredExercises.size()); i++) {
+                Exercise selectedExercise = filteredExercises.get(i);
+                System.out.println("Adding " + selectedExercise.getName() + " to " + this.name);
+                addExercise(selectedExercise);
             }
         }
     }
+
 }
+

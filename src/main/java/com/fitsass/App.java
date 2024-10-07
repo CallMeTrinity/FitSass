@@ -18,22 +18,13 @@ public class App
 {
     public static void main( String[] args )
     {
-       // UserPreference userPreference = new UserPreference();
-        //userPreference.newUserPreference();
-
-        //FitnessService fitnessService = new FitnessService(userPreference);
-
-        //userPreference.printUserPreference();
 
         ExerciseLoader loader = new ExerciseLoader();
         List<Exercise> exercises = loader.loadExercises("./src/main/resources/exercices.json");
 
         assert exercises != null;
-        List<Exercise> chestExercise = loader.loadMuscleGroupExercise(exercises, MuscleGroup.CHEST);
 
-
-        WorkoutSession workoutSession = new WorkoutSession("Chest Day", WorkoutType.WEIGHTLIFTING, chestExercise);
-        workoutSession.printWorkoutSession();
-
+        WorkoutSession workoutSession = new WorkoutSession("Chest and Back", WorkoutType.WEIGHTLIFTING);
+        workoutSession.generateSession(List.of(MuscleGroup.CHEST, MuscleGroup.BACK), 2, exercises);
     }
 }
