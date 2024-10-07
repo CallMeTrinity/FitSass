@@ -1,0 +1,362 @@
+[
+  {
+    "name": "Squat",
+    "difficulty": "Intermediate",
+    "type": "Strength",
+    "mainMuscleGroup": "LEGS"
+  },
+  {
+    "name": "Deadlift",
+    "difficulty": "Advanced",
+    "type": "Strength",
+    "mainMuscleGroup": "BACK"
+  },
+  {
+    "name": "Bench Press",
+    "difficulty": "Intermediate",
+    "type": "Strength",
+    "mainMuscleGroup": "CHEST"
+  },
+  {
+    "name": "Pull-up",
+    "difficulty": "Advanced",
+    "type": "Strength",
+    "mainMuscleGroup": "BACK"
+  },
+  {
+    "name": "Push-up",
+    "difficulty": "Intermediate",
+    "type": "Strength",
+    "mainMuscleGroup": "CHEST"
+  },
+  {
+    "name": "Lunges",
+    "difficulty": "Beginner",
+    "type": "Strength",
+    "mainMuscleGroup": "LEGS"
+  },
+  {
+    "name": "Dumbbell Shoulder Press",
+    "difficulty": "Intermediate",
+    "type": "Strength",
+    "mainMuscleGroup": "SHOULDERS"
+  },
+  {
+    "name": "Bicep Curl",
+    "difficulty": "Beginner",
+    "type": "Strength",
+    "mainMuscleGroup": "ARMS"
+  },
+  {
+    "name": "Tricep Dips",
+    "difficulty": "Intermediate",
+    "type": "Strength",
+    "mainMuscleGroup": "ARMS"
+  },
+  {
+    "name": "Lat Pulldown",
+    "difficulty": "Beginner",
+    "type": "Strength",
+    "mainMuscleGroup": "BACK"
+  },
+  {
+    "name": "Leg Press",
+    "difficulty": "Intermediate",
+    "type": "Strength",
+    "mainMuscleGroup": "LEGS"
+  },
+  {
+    "name": "CHEST Fly",
+    "difficulty": "Intermediate",
+    "type": "Strength",
+    "mainMuscleGroup": "CHEST"
+  },
+  {
+    "name": "Barbell Row",
+    "difficulty": "Advanced",
+    "type": "Strength",
+    "mainMuscleGroup": "BACK"
+  },
+  {
+    "name": "Dumbbell Row",
+    "difficulty": "Intermediate",
+    "type": "Strength",
+    "mainMuscleGroup": "BACK"
+  },
+  {
+    "name": "Romanian Deadlift",
+    "difficulty": "Advanced",
+    "type": "Strength",
+    "mainMuscleGroup": "LEGS"
+  },
+  {
+    "name": "Cable Tricep Pushdown",
+    "difficulty": "Beginner",
+    "type": "Strength",
+    "mainMuscleGroup": "ARMS"
+  },
+  {
+    "name": "Dumbbell Lateral Raise",
+    "difficulty": "Intermediate",
+    "type": "Strength",
+    "mainMuscleGroup": "SHOULDERS"
+  },
+  {
+    "name": "Seated Row",
+    "difficulty": "Beginner",
+    "type": "Strength",
+    "mainMuscleGroup": "BACK"
+  },
+  {
+    "name": "Incline Bench Press",
+    "difficulty": "Intermediate",
+    "type": "Strength",
+    "mainMuscleGroup": "CHEST"
+  },
+  {
+    "name": "Leg Curl",
+    "difficulty": "Beginner",
+    "type": "Strength",
+    "mainMuscleGroup": "LEGS"
+  },
+  {
+    "name": "Leg Extension",
+    "difficulty": "Beginner",
+    "type": "Strength",
+    "mainMuscleGroup": "LEGS"
+  },
+  {
+    "name": "Bulgarian Split Squat",
+    "difficulty": "Advanced",
+    "type": "Strength",
+    "mainMuscleGroup": "LEGS"
+  },
+  {
+    "name": "Hammer Curl",
+    "difficulty": "Intermediate",
+    "type": "Strength",
+    "mainMuscleGroup": "ARMS"
+  },
+  {
+    "name": "Overhead Tricep Extension",
+    "difficulty": "Intermediate",
+    "type": "Strength",
+    "mainMuscleGroup": "ARMS"
+  },
+  {
+    "name": "Dumbbell CHEST Press",
+    "difficulty": "Intermediate",
+    "type": "Strength",
+    "mainMuscleGroup": "CHEST"
+  },
+  {
+    "name": "Face Pull",
+    "difficulty": "Intermediate",
+    "type": "Strength",
+    "mainMuscleGroup": "SHOULDERS"
+  },
+  {
+    "name": "Shrugs",
+    "difficulty": "Beginner",
+    "type": "Strength",
+    "mainMuscleGroup": "TRAPS"
+  },
+  {
+    "name": "Cable CHEST Fly",
+    "difficulty": "Intermediate",
+    "type": "Strength",
+    "mainMuscleGroup": "CHEST"
+  },
+  {
+    "name": "Arnold Press",
+    "difficulty": "Advanced",
+    "type": "Strength",
+    "mainMuscleGroup": "SHOULDERS"
+  },
+  {
+    "name": "Zercher Squat",
+    "difficulty": "Advanced",
+    "type": "Strength",
+    "mainMuscleGroup": "LEGS"
+  },
+  {
+    "name": "Dumbbell Pullover",
+    "difficulty": "Intermediate",
+    "type": "Strength",
+    "mainMuscleGroup": "CHEST"
+  },
+  {
+    "name": "Pec Deck Machine",
+    "difficulty": "Beginner",
+    "type": "Strength",
+    "mainMuscleGroup": "CHEST"
+  },
+  {
+    "name": "Goblet Squat",
+    "difficulty": "Beginner",
+    "type": "Strength",
+    "mainMuscleGroup": "LEGS"
+  },
+  {
+    "name": "Reverse Lunge",
+    "difficulty": "Intermediate",
+    "type": "Strength",
+    "mainMuscleGroup": "LEGS"
+  },
+  {
+    "name": "Incline Dumbbell Curl",
+    "difficulty": "Intermediate",
+    "type": "Strength",
+    "mainMuscleGroup": "ARMS"
+  },
+  {
+    "name": "Incline Dumbbell Press",
+    "difficulty": "Intermediate",
+    "type": "Strength",
+    "mainMuscleGroup": "CHEST"
+  },
+  {
+    "name": "Farmer's Walk",
+    "difficulty": "Beginner",
+    "type": "Strength",
+    "mainMuscleGroup": "FULL_BODY"
+  },
+  {
+    "name": "Bent Over Row",
+    "difficulty": "Advanced",
+    "type": "Strength",
+    "mainMuscleGroup": "BACK"
+  },
+  {
+    "name": "Good Morning",
+    "difficulty": "Advanced",
+    "type": "Strength",
+    "mainMuscleGroup": "LEGS"
+  },
+  {
+    "name": "Cable Row",
+    "difficulty": "Beginner",
+    "type": "Strength",
+    "mainMuscleGroup": "BACK"
+  },
+  {
+    "name": "Cable Curl",
+    "difficulty": "Beginner",
+    "type": "Strength",
+    "mainMuscleGroup": "ARMS"
+  },
+  {
+    "name": "Cable Lateral Raise",
+    "difficulty": "Intermediate",
+    "type": "Strength",
+    "mainMuscleGroup": "SHOULDERS"
+  },
+  {
+    "name": "Cable Face Pull",
+    "difficulty": "Intermediate",
+    "type": "Strength",
+    "mainMuscleGroup": "SHOULDERS"
+  },
+  {
+    "name": "Cable Tricep Extension",
+    "difficulty": "Beginner",
+    "type": "Strength",
+    "mainMuscleGroup": "ARMS"
+  },
+  {
+    "name": "Cable Crunch",
+    "difficulty": "Beginner",
+    "type": "Core",
+    "mainMuscleGroup": "ABS"
+  },
+  {
+    "name": "Cable Woodchop",
+    "difficulty": "Intermediate",
+    "type": "Core",
+    "mainMuscleGroup": "ABS"
+  },
+  {
+    "name": "Cable Twist",
+    "difficulty": "Intermediate",
+    "type": "Core",
+    "mainMuscleGroup": "ABS"
+  },
+  {
+    "name": "Cable Side Bend",
+    "difficulty": "Beginner",
+    "type": "Core",
+    "mainMuscleGroup": "ABS"
+  },
+  {
+    "name": "Cable Russian Twist",
+    "difficulty": "Intermediate",
+    "type": "Core",
+    "mainMuscleGroup": "ABS"
+  },
+  {
+    "name": "Cable Leg Raise",
+    "difficulty": "Advanced",
+    "type": "Core",
+    "mainMuscleGroup": "ABS"
+  },
+  {
+    "name": "Cable Mountain Climbers",
+    "difficulty": "Intermediate",
+    "type": "Core",
+    "mainMuscleGroup": "ABS"
+  },
+  {
+    "name": "Single-Leg Deadlift",
+    "difficulty": "Advanced",
+    "type": "Strength",
+    "mainMuscleGroup": "LEGS"
+  },
+  {
+    "name": "Russian Twist",
+    "difficulty": "Intermediate",
+    "type": "Core",
+    "mainMuscleGroup": "ABS"
+  },
+  {
+    "name": "Hanging Leg Raise",
+    "difficulty": "Advanced",
+    "type": "Core",
+    "mainMuscleGroup": "ABS"
+  },
+  {
+    "name": "Mountain Climbers",
+    "difficulty": "Intermediate",
+    "type": "Core",
+    "mainMuscleGroup": "ABS"
+  },
+  {
+    "name": "Bicycle Crunch",
+    "difficulty": "Beginner",
+    "type": "Core",
+    "mainMuscleGroup": "ABS"
+  },
+  {
+    "name": "Plank",
+    "difficulty": "Advanced",
+    "type": "Core",
+    "mainMuscleGroup": "ABS"
+  },
+  {
+    "name": "Side Plank",
+    "difficulty": "Intermediate",
+    "type": "Core",
+    "mainMuscleGroup": "ABS"
+  },
+  {
+    "name": "Toe Touch",
+    "difficulty": "Beginner",
+    "type": "Core",
+    "mainMuscleGroup": "ABS"
+  },
+  {
+    "name": "V-Up",
+    "difficulty": "Advanced",
+    "type": "Core",
+    "mainMuscleGroup": "ABS"
+  }
+]

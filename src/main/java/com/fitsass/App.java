@@ -1,6 +1,8 @@
 package com.fitsass;
 
+import com.fitsass.enums.MuscleGroup;
 import com.fitsass.enums.WorkoutType;
+import com.fitsass.loader.ExerciseLoader;
 import com.fitsass.models.Exercise;
 import com.fitsass.models.UserPreference;
 import com.fitsass.models.WorkoutSession;
@@ -23,13 +25,14 @@ public class App
 
         //userPreference.printUserPreference();
 
-        Exercise Bench = new Exercise("Bench Press", 3, 10, "Intermediate");
-        Exercise Squat = new Exercise("Squat", 3, 10, "Intermediate");
-        Exercise Deadlift = new Exercise("Deadlift", 3, 10, "Intermediate");
+        ExerciseLoader loader = new ExerciseLoader();
+        List<Exercise> exercises = loader.loadExercises("./src/main/resources/exercices.json");
 
-        List<Exercise> exercises = List.of(Bench, Squat, Deadlift);
+        assert exercises != null;
+        List<Exercise> chestExercise = loader.loadMuscleGroupExercise(exercises, MuscleGroup.CHEST);
 
-        WorkoutSession workoutSession = new WorkoutSession(WorkoutType.WEIGHTLIFTING, exercises);
+
+        WorkoutSession workoutSession = new WorkoutSession("Chest Day", WorkoutType.WEIGHTLIFTING, chestExercise);
         workoutSession.printWorkoutSession();
 
     }
