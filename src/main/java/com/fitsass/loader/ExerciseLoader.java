@@ -16,10 +16,9 @@ public class ExerciseLoader {
         Gson gson = new Gson();
 
         try (Reader reader = new FileReader(filePath)) {
-            List<Exercise> exercises = gson.fromJson(reader, new TypeToken<List<Exercise>>(){}.getType());
-            return exercises;
+            return gson.fromJson(reader, new TypeToken<List<Exercise>>(){}.getType());
         } catch (Exception e) {
-            e.printStackTrace();
+            e.getMessage();
             return null;
         }
     }

@@ -1,5 +1,6 @@
 package com.fitsass.models;
 
+import com.fitsass.enums.Muscle;
 import com.fitsass.enums.MuscleGroup;
 
 public class Exercise {
@@ -9,9 +10,14 @@ public class Exercise {
     private String duration;
     private String difficulty;
     private MuscleGroup mainMuscleGroup;
+    private Muscle specificity;
 
     public String getName() {
         return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     public int getReps() {
@@ -34,6 +40,10 @@ public class Exercise {
         return difficulty;
     }
 
+    public void setDifficulty(String difficulty) {
+        this.difficulty = difficulty;
+    }
+
     public String getDuration() {
         return duration;
     }
@@ -46,13 +56,26 @@ public class Exercise {
         return mainMuscleGroup;
     }
 
+    public void setMainMuscleGroup(MuscleGroup mainMuscleGroup) {
+        this.mainMuscleGroup = mainMuscleGroup;
+    }
+
+    public Muscle getSpecificity() {
+        return specificity;
+    }
+
+    public void setSpecificity(Muscle specificity) {
+        this.specificity = specificity;
+    }
+
     public void printExercise() {
         System.out.println("--------------------");
         System.out.println("Exercise:   " + name);
+        System.out.println("Specifity:  " + specificity);
+        System.out.println("Muscle Group: " + mainMuscleGroup);
         System.out.println("Sets:       " + sets);
         System.out.println("Reps:       " + reps);
         System.out.println("Duration:   " + duration + " minutes");
         System.out.println("Difficulty: " + difficulty);
-        System.out.println("Muscle Group: " + mainMuscleGroup);
     }
 }

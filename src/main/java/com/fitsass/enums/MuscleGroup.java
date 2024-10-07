@@ -1,21 +1,30 @@
 package com.fitsass.enums;
 
-public enum MuscleGroup {
-    CHEST("Includes lower chest, upper chest, and inner chest."),
-    BACK("Includes upper back, lower back, and lats."),
-    LEGS("Includes quads, hamstrings, and calves."),
-    SHOULDERS("Includes front delts, side delts, and rear delts."),
-    ARMS("Includes biceps, triceps, and forearms."),
-    ABS("Includes upper abs, lower abs, and obliques."),
-    TRAPS("Its just traps."),
-    FULL_BODY("Full body workout.");
-    private final String description;
+import java.util.List;
 
-    MuscleGroup(String description) {
+public enum MuscleGroup {
+    CHEST("Includes lower chest, upper chest, and inner chest.", List.of(Muscle.UPPER_CHEST, Muscle.LOWER_CHEST, Muscle.INNER_CHEST)),
+    BACK("Includes upper back, lower back, and lats.", List.of(Muscle.UPPER_BACK, Muscle.LATS, Muscle.LOWER_BACK)),
+    LEGS("Includes quads, hamstrings, and calves.", List.of(Muscle.QUADS, Muscle.HAMSTRINGS, Muscle.CALVES)),
+    SHOULDERS("Includes front delts, side delts, and rear delts.", List.of(Muscle.FRONT_DELTS, Muscle.SIDE_DELTS, Muscle.REAR_DELTS)),
+    ARMS("Includes biceps, triceps, and forearms.", List.of(Muscle.BICEPS, Muscle.TRICEPS, Muscle.FOREARMS)),
+    ABS("Includes upper abs, lower abs, and obliques.", List.of(Muscle.UPPER_ABS, Muscle.LOWER_ABS, Muscle.OBLIQUES)),
+    TRAPS("Its just traps.", List.of(Muscle.TRAPS)),
+    FULL_BODY("Full body workout.", List.of(Muscle.UPPER_CHEST, Muscle.LOWER_CHEST, Muscle.UPPER_BACK, Muscle.LATS, Muscle.QUADS, Muscle.HAMSTRINGS));
+
+    private final String description;
+    private final List<Muscle> muscles;
+
+    MuscleGroup(String description, List<Muscle> muscles) {
         this.description = description;
+        this.muscles = muscles;
     }
 
     public String getDescription() {
         return description;
+    }
+
+    public List<Muscle> getMuscles() {
+        return muscles;
     }
 }
