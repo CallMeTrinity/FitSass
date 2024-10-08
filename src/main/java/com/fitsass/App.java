@@ -13,9 +13,7 @@ public class App
     {
 
         UserPreference userPreference = new UserPreference();
-        userPreference.newUserPreference();
-        System.out.println(userPreference.calculateBMI());
-
+        userPreference.printUserPreference();
         System.exit(0);
 
         ExerciseLoader loader = new ExerciseLoader();

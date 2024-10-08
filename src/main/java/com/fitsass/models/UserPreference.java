@@ -1,8 +1,10 @@
 package com.fitsass.models;
 
 import com.fitsass.enums.FitnessGoal;
+import com.fitsass.enums.PhysicalLimitations;
 import com.fitsass.enums.WorkoutType;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class UserPreference {
@@ -10,11 +12,37 @@ public class UserPreference {
     private int experienceLevel; // out of 10
     private int weeklyWorkoutFrequency;
     private FitnessGoal goal;
-    private String recoveryLevel; // New: "Low", "Medium", "High"
     private WorkoutType exercisePreference; // New: "Weightlifting", "Cardio", etc.
-    private String physicalLimitations; // New: Physical issues or limitations
+    private PhysicalLimitations physicalLimitations; // New: Physical issues or limitations
     private int currentWeight; // New: User's weight in kg
     private double height; // New: User's height in meters
+
+    public UserPreference() {
+        Scanner scanner = new Scanner(System.in);
+        // Collect basic details
+        System.out.println("Enter your name: ");
+        name = scanner.nextLine();
+
+        // Collecting experience level
+        experienceLevel = getValidIntInput(scanner, "Enter your experience level in years (0-10): ", 0, 10);
+
+        // Select fitness goal
+        goal = getValidGoal(scanner);
+
+        // Collecting weekly workout frequency
+        weeklyWorkoutFrequency = getValidIntInput(scanner, "Enter your desired weekly workout frequency (1-7): ", 1, 7);
+
+        // Collecting exercise preference
+        exercisePreference = getValidExercisePreference(scanner);
+
+        // Collecting physical limitations
+        System.out.println("Do you have any physical limitations (Knee pain, Back issues, etc.)? If none, enter 'None': ");
+        physicalLimitations = getValidPhysicalLimitation(scanner);
+
+        // Collecting current weight and height
+        currentWeight = getValidIntInput(scanner, "Enter your current weight (in kg): ", 30, 300);
+        height = getValidDoubleInput(scanner, "Enter your height (in meters): ", 1.2, 2.5);
+    }
 
     // New: Method to calculate BMI
     public double calculateBMI() {
@@ -29,44 +57,11 @@ public class UserPreference {
         System.out.println("Experience Level: " + experienceLevel);
         System.out.println("Weekly Workout Frequency: " + weeklyWorkoutFrequency);
         System.out.println("Goal: " + goal.getDescription());
-        System.out.println("Recovery Level: " + recoveryLevel);
         System.out.println("Exercise Preference: " + exercisePreference);
         System.out.println("Physical Limitations: " + physicalLimitations);
         System.out.println("Current Weight: " + currentWeight + " kg");
         System.out.println("Height: " + height + " m");
         System.out.println("Calculated BMI: " + calculateBMI());
-    }
-
-    public void newUserPreference() {
-        Scanner scanner = new Scanner(System.in);
-
-        // Collect basic details
-        System.out.println("Enter your name: ");
-        name = scanner.nextLine();
-
-        // Collecting experience level
-        experienceLevel = getValidIntInput(scanner, "Enter your experience level in years (0-10): ", 0, 10);
-
-        // Select fitness goal
-        goal = getValidGoal(scanner);
-
-        // Collecting weekly workout frequency
-        weeklyWorkoutFrequency = getValidIntInput(scanner, "Enter your desired weekly workout frequency (1-7): ", 1, 7);
-
-        // Collecting recovery level
-        System.out.println("How would you rate your recovery level (Low, Medium, High)? ");
-        recoveryLevel = scanner.nextLine();
-
-        // Collecting exercise preference
-        exercisePreference = getValidExercisePreference(scanner);
-
-        // Collecting physical limitations
-        System.out.println("Do you have any physical limitations (Knee pain, Back issues, etc.)? If none, enter 'None': ");
-        physicalLimitations = scanner.nextLine();
-
-        // Collecting current weight and height
-        currentWeight = getValidIntInput(scanner, "Enter your current weight (in kg): ", 30, 300);
-        height = getValidDoubleInput(scanner, "Enter your height (in meters): ", 1.2, 2.5);
     }
 
     // Helper method to validate integer input
@@ -132,15 +127,54 @@ public class UserPreference {
     private WorkoutType getValidExercisePreference(Scanner scanner) {
         WorkoutType preference = null;
         while (preference == null) {
-            System.out.println("Enter your preferred type of exercise: [WEIGHTLIFTING, CARDIO, YOGA, MIX]");
+            System.out.println("Enter your preferred type of exercise: [WEIGHTLIFTING(W), CARDIO(C), YOGA(Y), GENERAL(G)]");
+
             try {
                 String input = scanner.nextLine().toUpperCase();
-                preference = WorkoutType.valueOf(input);
+                switch (input){
+                    case "W" -> preference = WorkoutType.WEIGHTLIFTING;
+                    case "C" -> preference = WorkoutType.CARDIO;
+                    case "Y" -> preference = WorkoutType.YOGA;
+                    case "G" -> preference = WorkoutType.GENERAL;
+                    default -> preference = WorkoutType.valueOf(input);
+                }
             } catch (IllegalArgumentException e) {
                 System.out.println("Invalid input. Please enter one of the valid options.");
             }
         }
         return preference;
+    }
+
+    public PhysicalLimitations getValidPhysicalLimitation(Scanner scanner) {
+        PhysicalLimitations limitation = null;
+        PhysicalLimitations[] limitations = PhysicalLimitations.values();
+
+        while (limitation == null) {
+            // Afficher toutes les limitations disponibles avec leur numéro correspondant
+            System.out.println("Enter your physical limitation: ");
+            System.out.println("[0] None");
+
+            // Afficher les options à partir de l'énumération PhysicalLimitations
+            for (int i = 0; i < limitations.length; i++) {
+                System.out.println("[" + (i + 1) + "] " + limitations[i].name() + " - " + limitations[i].getDescription());
+            }
+
+            try {
+                // Obtenir l'entrée de l'utilisateur (0 pour "None", sinon la limitation sélectionnée)
+                int limitationInput = getValidIntInput(scanner, "Enter the number corresponding to your limitation: ", 0, limitations.length);
+
+                if (limitationInput == 0) {
+                    limitation = null; // Aucun problème physique sélectionné
+                    System.out.println("No physical limitations selected.");
+                } else {
+                    limitation = limitations[limitationInput - 1]; // Sélection de la limitation choisie
+                    System.out.println("Selected limitation: " + limitation.getDescription());
+                }
+            } catch (NumberFormatException e) {
+                System.out.println("Invalid input. Please enter a number.");
+            }
+        }
+        return limitation;
     }
 
     // getter and setter methods
@@ -176,14 +210,6 @@ public class UserPreference {
         this.name = name;
     }
 
-    public String getRecoveryLevel() {
-        return recoveryLevel;
-    }
-
-    public void setRecoveryLevel(String recoveryLevel) {
-        this.recoveryLevel = recoveryLevel;
-    }
-
     public int getCurrentWeight() {
         return currentWeight;
     }
@@ -208,11 +234,11 @@ public class UserPreference {
         this.height = height;
     }
 
-    public String getPhysicalLimitations() {
+    public PhysicalLimitations getPhysicalLimitations() {
         return physicalLimitations;
     }
 
-    public void setPhysicalLimitations(String physicalLimitations) {
+    public void setPhysicalLimitations(PhysicalLimitations physicalLimitations) {
         this.physicalLimitations = physicalLimitations;
     }
 }
