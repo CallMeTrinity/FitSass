@@ -10,11 +10,13 @@ public class WorkoutSession {
     private final String name;
     private final List<Exercise> exercises;
     private WorkoutType type;
+    private final List<MuscleGroup> muscleGroups;
 
-    public WorkoutSession(String name, WorkoutType type) {
+    public WorkoutSession(String name, WorkoutType type, List<MuscleGroup> muscleGroups) {
         this.name = name;
         this.type = type;
         this.exercises = new ArrayList<>();
+        this.muscleGroups = muscleGroups;
     }
 
     public void addExercise(Exercise exercise) {
@@ -22,7 +24,7 @@ public class WorkoutSession {
     }
 
     public void printWorkoutSession() {
-        System.out.println(this.name + " : " + type);
+        System.out.println(this.name + " : " + muscleGroups.toString());
         for (Exercise exercise : exercises) {
             exercise.printExercise();
         }
@@ -36,41 +38,34 @@ public class WorkoutSession {
         this.type = type;
     }
 
-    public void generateSession(List<MuscleGroup> muscleGroups, int numberOfExercises, List<Exercise> exercises) {
+    public void generateSession(int numberOfExercises, List<Exercise> exercises) {
         for (MuscleGroup muscleGroup : muscleGroups) {
             Map<Muscle, List<Exercise>> muscleExerciseMap = new HashMap<>();
 
-            // Initialiser la map avec les muscles associés au groupe musculaire
             for (Muscle muscle : muscleGroup.getMuscles()) {
                 muscleExerciseMap.put(muscle, new ArrayList<>());
             }
 
-            // Remplir la map avec les exercices correspondants à chaque muscle spécifique
             for (Exercise exercise : exercises) {
                 if ((exercise.getMainMuscleGroup().equals(muscleGroup) || muscleGroup.equals(MuscleGroup.FULL_BODY)) && muscleExerciseMap.containsKey(exercise.getSpecificity())) {
                     muscleExerciseMap.get(exercise.getSpecificity()).add(exercise);
                 }
             }
 
-            // Mélanger les exercices pour chaque muscle
             for (List<Exercise> muscleSpecificExercises : muscleExerciseMap.values()) {
                 Collections.shuffle(muscleSpecificExercises);
             }
 
-            // Si le groupe musculaire est FULL_BODY, on sélectionne un exercice pour chaque muscle
             if (muscleGroup == MuscleGroup.FULL_BODY) {
-                // Sélectionner au moins un exercice pour chaque muscle dans FULL_BODY
                 for (Muscle muscle : muscleGroup.getMuscles()) {
                     List<Exercise> muscleSpecificExercises = muscleExerciseMap.get(muscle);
 
                     if (!muscleSpecificExercises.isEmpty()) {
                         Exercise selectedExercise = muscleSpecificExercises.removeFirst();
-                        System.out.println("Adding " + selectedExercise.getName() + " to " + this.name + " which works on " + muscle);
                         addExercise(selectedExercise);
                     }
                 }
             } else {
-                // Logique normale : distribuer les exercices pour chaque muscle (selon le nombre d'exercices)
                 int exercisesAdded = 0;
                 boolean musclesAvailable = true;
 
@@ -82,7 +77,6 @@ public class WorkoutSession {
 
                         if (!muscleSpecificExercises.isEmpty() && exercisesAdded < numberOfExercises) {
                             Exercise selectedExercise = muscleSpecificExercises.removeFirst();
-                            System.out.println("Adding " + selectedExercise.getName() + " to " + this.name + " which works on " + muscle);
                             addExercise(selectedExercise);
                             exercisesAdded++;
                             musclesAvailable = true;
