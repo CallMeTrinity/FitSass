@@ -1,0 +1,358 @@
+[
+  {
+    "name": "UPPER_LOWER",
+    "description": "4 days: 2 upper body days (chest, back, shoulders, arms) and 2 lower body days (quads, hamstrings, calves).",
+    "days": 4,
+    "workoutType": "WEIGHTLIFTING",
+    "muscleGroupsPerDay": {
+      "1": [
+        "CHEST",
+        "BACK",
+        "SHOULDERS",
+        "ARMS"
+      ],
+      "2": [
+        "LEGS"
+      ],
+      "3": [
+        "CHEST",
+        "BACK",
+        "SHOULDERS",
+        "ARMS"
+      ],
+      "4": [
+        "LEGS"
+      ]
+    }
+  },
+  {
+    "name": "PHUL",
+    "description": "4 days: Power Hypertrophy Upper Lower (PHUL) split for both strength and muscle building.",
+    "days": 4,
+    "workoutType": "WEIGHTLIFTING",
+    "muscleGroupsPerDay": {
+      "1": [
+        "CHEST",
+        "BACK",
+        "SHOULDERS",
+        "ARMS"
+      ],
+      "2": [
+        "LEGS"
+      ],
+      "3": [
+        "CHEST",
+        "BACK",
+        "SHOULDERS",
+        "ARMS"
+      ],
+      "4": [
+        "LEGS"
+      ]
+    }
+  },
+  {
+    "name": "PHAT",
+    "description": "5 days: Power Hypertrophy Adaptive Training (PHAT), a 5-day split focusing on both strength and hypertrophy.",
+    "days": 5,
+    "workoutType": "WEIGHTLIFTING",
+    "muscleGroupsPerDay": {
+      "1": [
+        "CHEST",
+        "BACK",
+        "SHOULDERS",
+        "ARMS"
+      ],
+      "2": [
+        "LEGS"
+      ],
+      "3": [
+        "BACK",
+        "SHOULDERS"
+      ],
+      "4": [
+        "LEGS"
+      ],
+      "5": [
+        "CHEST",
+        "ARMS"
+      ]
+    }
+  },
+  {
+    "name": "PUSH_PULL_LEGS_3_DAYS",
+    "description": "3 days: A 3-day Push-Pull-Legs split for those with a limited schedule.",
+    "days": 3,
+    "workoutType": "WEIGHTLIFTING",
+    "muscleGroupsPerDay": {
+      "1": [
+        "CHEST",
+        "SHOULDERS",
+        "ARMS"
+      ],
+      "2": [
+        "BACK",
+        "ARMS"
+      ],
+      "3": [
+        "LEGS"
+      ]
+    }
+  },
+  {
+    "name": "PUSH_PULL_LEGS",
+    "description": "6 days: 2 push days (chest, shoulders, triceps), 2 pull days (back, biceps), and 2 leg days (quads, hamstrings, calves).",
+    "days": 6,
+    "workoutType": "WEIGHTLIFTING",
+    "muscleGroupsPerDay": {
+      "1": [
+        "CHEST",
+        "SHOULDERS",
+        "ARMS"
+      ],
+      "2": [
+        "BACK",
+        "ARMS"
+      ],
+      "3": [
+        "LEGS"
+      ],
+      "4": [
+        "CHEST",
+        "SHOULDERS",
+        "ARMS"
+      ],
+      "5": [
+        "BACK",
+        "ARMS"
+      ],
+      "6": [
+        "LEGS"
+      ]
+    }
+  },
+  {
+    "name": "FULL_BODY",
+    "description": "Between 2 and 4 days: full body workouts on each day, targeting all major muscle groups (chest, back, shoulders, arms, legs).",
+    "days": 3,
+    "workoutType": "WEIGHTLIFTING",
+    "muscleGroupsPerDay": {
+      "1": [
+        "CHEST",
+        "BACK",
+        "SHOULDERS",
+        "ARMS",
+        "LEGS"
+      ],
+      "2": [
+        "CHEST",
+        "BACK",
+        "SHOULDERS",
+        "ARMS",
+        "LEGS"
+      ],
+      "3": [
+        "CHEST",
+        "BACK",
+        "SHOULDERS",
+        "ARMS",
+        "LEGS"
+      ]
+    }
+  },
+  {
+    "name": "ARNOLD_SPLIT",
+    "description": "6 days: Classic Arnold Schwarzenegger split, alternating chest/back and arms/shoulders, with separate leg days.",
+    "days": 6,
+    "workoutType": "WEIGHTLIFTING",
+    "muscleGroupsPerDay": {
+      "1": [
+        "CHEST",
+        "BACK"
+      ],
+      "2": [
+        "SHOULDERS",
+        "ARMS"
+      ],
+      "3": [
+        "LEGS"
+      ],
+      "4": [
+        "CHEST",
+        "BACK"
+      ],
+      "5": [
+        "SHOULDERS",
+        "ARMS"
+      ],
+      "6": [
+        "LEGS"
+      ]
+    }
+  },
+  {
+    "name": "CARDIO_3_DAYS",
+    "description": "3 days: A cardio-focused split with running, cycling, and swimming.",
+    "days": 3,
+    "workoutType": "CARDIO",
+    "muscleGroupsPerDay": {
+      "1": [
+        "FULL_BODY"
+      ],
+      "2": [
+        "FULL_BODY"
+      ],
+      "3": [
+        "FULL_BODY"
+      ]
+    }
+  },
+  {
+    "name": "CARDIO_5_DAYS",
+    "description": "5 days: A cardio-focused split with running, cycling, rowing, and HIIT exercises.",
+    "days": 5,
+    "workoutType": "CARDIO",
+    "muscleGroupsPerDay": {
+      "1": [
+        "FULL_BODY"
+      ],
+      "2": [
+        "FULL_BODY"
+      ],
+      "3": [
+        "FULL_BODY"
+      ],
+      "4": [
+        "FULL_BODY"
+      ],
+      "5": [
+        "FULL_BODY"
+      ]
+    }
+  },
+  {
+    "name": "HIIT_4_DAYS",
+    "description": "4 days: High Intensity Interval Training focusing on alternating between intense cardio and recovery.",
+    "days": 4,
+    "workoutType": "HIIT",
+    "muscleGroupsPerDay": {
+      "1": [
+        "FULL_BODY"
+      ],
+      "2": [
+        "FULL_BODY"
+      ],
+      "3": [
+        "FULL_BODY"
+      ],
+      "4": [
+        "FULL_BODY"
+      ]
+    }
+  },
+  {
+    "name": "YOGA_FLEXIBILITY",
+    "description": "2 days: A yoga and flexibility routine focused on stretching and breathing.",
+    "days": 2,
+    "workoutType": "YOGA",
+    "muscleGroupsPerDay": {
+      "1": [
+        "FLEXIBILITY",
+        "BALANCE"
+      ],
+      "2": [
+        "FLEXIBILITY",
+        "BALANCE"
+      ]
+    }
+  },
+  {
+    "name": "STRETCHING_3_DAYS",
+    "description": "3 days: Stretching routine focusing on flexibility and muscle recovery.",
+    "days": 3,
+    "workoutType": "STRETCHING",
+    "muscleGroupsPerDay": {
+      "1": [
+        "FLEXIBILITY",
+        "BALANCE"
+      ],
+      "2": [
+        "FLEXIBILITY",
+        "BALANCE"
+      ],
+      "3": [
+        "FLEXIBILITY",
+        "BALANCE"
+      ]
+    }
+  },
+  {
+    "name": "GENERAL_FITNESS_4_DAYS",
+    "description": "4 days: General fitness plan focusing on maintaining overall physical health.",
+    "days": 4,
+    "workoutType": "GENERAL",
+    "muscleGroupsPerDay": {
+      "1": [
+        "FULL_BODY"
+      ],
+      "2": [
+        "FULL_BODY"
+      ],
+      "3": [
+        "FULL_BODY"
+      ],
+      "4": [
+        "FULL_BODY"
+      ]
+    }
+  },
+  {
+    "name": "GENERAL_FITNESS_5_DAYS",
+    "description": "5 days: General fitness plan focusing on maintaining overall physical health.",
+    "days": 5,
+    "workoutType": "GENERAL",
+    "muscleGroupsPerDay": {
+      "1": [
+        "FULL_BODY"
+      ],
+      "2": [
+        "FULL_BODY"
+      ],
+      "3": [
+        "FULL_BODY"
+      ],
+      "4": [
+        "FULL_BODY"
+      ],
+      "5": [
+        "FULL_BODY"
+      ]
+    }
+  },
+  {
+    "name": "GENERAL_FITNESS_6_DAYS",
+    "description": "6 days: General fitness plan focusing on maintaining overall physical health.",
+    "days": 6,
+    "workoutType": "GENERAL",
+    "muscleGroupsPerDay": {
+      "1": [
+        "FULL_BODY"
+      ],
+      "2": [
+        "FULL_BODY"
+      ],
+      "3": [
+        "FULL_BODY"
+      ],
+      "4": [
+        "FULL_BODY"
+      ],
+      "5": [
+        "FULL_BODY"
+      ],
+      "6": [
+        "FULL_BODY"
+      ]
+    }
+  }
+]
