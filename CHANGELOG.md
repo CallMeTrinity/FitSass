@@ -4,7 +4,7 @@
 ### Added
 - Initial implementation of workout plan generation.
 - Added support for various workout splits (Upper-Lower, Push-Pull-Legs, etc.).
-- JSON loader for exercise.
+- JSON loader for exercises.
 
 ## [v0.0.1-alpha] - 2024-09-25
 ### Added
