@@ -11,15 +11,11 @@ import java.util.Scanner;
 public class UserPreference {
     private String name;
     private int experienceLevel;
-
     private int weeklyWorkoutFrequency;
     private FitnessGoal goal;
     private WorkoutType exercisePreference;
-
     private List<PhysicalLimitations> physicalLimitations;
-
     private int currentWeight;
-
     private double height;
 
 
@@ -112,45 +108,62 @@ public class UserPreference {
 
     private FitnessGoal getValidGoal(Scanner scanner) {
         FitnessGoal fitnessGoal = null;
+        FitnessGoal[] goals = FitnessGoal.values(); // Récupère toutes les valeurs de l'énumération
+
         while (fitnessGoal == null) {
-            System.out.println("Enter your goal: [0] GAIN_MUSCLE, [1] LOSE_FAT, [2] MAINGAIN, [3] FLEXIBILITY");
+            // Afficher toutes les options disponibles
+            System.out.println("Enter your goal:");
+            for (int i = 0; i < goals.length; i++) {
+                System.out.println("[" + i + "] " + goals[i].name() + " - " + goals[i].getDescription());
+            }
+
             try {
+                // Obtenir l'entrée de l'utilisateur
                 int goalInput = Integer.parseInt(scanner.nextLine());
-                switch (goalInput) {
-                    case 0 -> fitnessGoal = FitnessGoal.GAIN_MUSCLE;
-                    case 1 -> fitnessGoal = FitnessGoal.LOSE_WEIGHT;
-                    case 2 -> fitnessGoal = FitnessGoal.MAINGAIN;
-                    case 3 -> fitnessGoal = FitnessGoal.FLEXIBILITY;
-                    default -> System.out.println("Please select a valid goal (0-3).");
+
+                if (goalInput >= 0 && goalInput < goals.length) {
+                    fitnessGoal = goals[goalInput]; // Sélectionner le goal en fonction de l'entrée de l'utilisateur
+                } else {
+                    System.out.println("Please select a valid goal number (0-" + (goals.length - 1) + ").");
                 }
             } catch (NumberFormatException e) {
                 System.out.println("Invalid input. Please enter a number.");
             }
         }
+
         return fitnessGoal;
     }
 
 
+
     private WorkoutType getValidExercisePreference(Scanner scanner) {
         WorkoutType preference = null;
+        WorkoutType[] workoutTypes = WorkoutType.values(); // Récupère toutes les valeurs de l'énumération
+
         while (preference == null) {
-            System.out.println("Enter your preferred type of exercise: [WEIGHTLIFTING(W), CARDIO(C), YOGA(Y), GENERAL(G)]");
+            // Afficher toutes les options disponibles
+            System.out.println("Enter your preferred type of exercise:");
+            for (int i = 0; i < workoutTypes.length; i++) {
+                System.out.println("[" + i + "] " + workoutTypes[i].name() + " - " + workoutTypes[i].getDescription());
+            }
 
             try {
-                String input = scanner.nextLine().toUpperCase();
-                switch (input) {
-                    case "W" -> preference = WorkoutType.WEIGHTLIFTING;
-                    case "C" -> preference = WorkoutType.CARDIO;
-                    case "Y" -> preference = WorkoutType.YOGA;
-                    case "G" -> preference = WorkoutType.GENERAL;
-                    default -> preference = WorkoutType.valueOf(input);
+                // Obtenir l'entrée de l'utilisateur
+                int input = Integer.parseInt(scanner.nextLine());
+
+                if (input >= 0 && input < workoutTypes.length) {
+                    preference = workoutTypes[input]; // Sélectionner le type d'exercice selon l'entrée
+                } else {
+                    System.out.println("Please select a valid number (0-" + (workoutTypes.length - 1) + ").");
                 }
-            } catch (IllegalArgumentException e) {
-                System.out.println("Invalid input. Please enter one of the valid options.");
+            } catch (NumberFormatException e) {
+                System.out.println("Invalid input. Please enter a number.");
             }
         }
+
         return preference;
     }
+
 
     public List<PhysicalLimitations> getValidPhysicalLimitations(Scanner scanner) {
         List<PhysicalLimitations> selectedLimitations = new ArrayList<>();

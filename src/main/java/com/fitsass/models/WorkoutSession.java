@@ -62,8 +62,11 @@ public class WorkoutSession {
             adjustDifficulty(userPreference);
 
             for (Exercise exercise : exercises) {
+                if (exercise.getMainMuscleGroup() == null) {
+                    System.out.println("Exercise " + exercise.getName() + " does not have a main muscle group.");
+                    System.exit(0);
+                }
                 if (((exercise.getMainMuscleGroup().equals(muscleGroup) || muscleGroup.equals(MuscleGroup.FULL_BODY)) && muscleExerciseMap.containsKey(exercise.getSpecificity())) && exercise.getDifficulty() <= difficulty && exercise.getType().equals(type)) {
-                    System.out.println("##"+exercise.getName() + "selected");
                     boolean isLimited = false;
 
                     for (PhysicalLimitations userLimitation : userPreference.getPhysicalLimitations()) {

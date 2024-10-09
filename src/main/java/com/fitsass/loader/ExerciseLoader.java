@@ -12,10 +12,13 @@ import java.util.List;
 
 public class ExerciseLoader {
 
-    public List<Exercise> loadExercises(String filePath) {
+    private static final String EXERCISES_FILE = "./src/main/resources/exercises.json";
+
+
+    public List<Exercise> loadExercises() {
         Gson gson = new Gson();
 
-        try (Reader reader = new FileReader(filePath)) {
+        try (Reader reader = new FileReader(EXERCISES_FILE)) {
             return gson.fromJson(reader, new TypeToken<List<Exercise>>(){}.getType());
         } catch (Exception e) {
             e.getMessage();

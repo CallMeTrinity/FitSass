@@ -11,15 +11,9 @@ public class App
 {
     public static void main( String[] args )
     {
-
         UserPreference userPreference = new UserPreference();
-
-        ExerciseLoader loader = new ExerciseLoader();
-        List<Exercise> exercises = loader.loadExercises("./src/main/resources/exercices.json");
-
-
         WorkoutPlan workoutPlan = new WorkoutPlan(userPreference.getWeeklyWorkoutFrequency(), userPreference);
-        workoutPlan.generateWorkoutPlan(exercises);
+        workoutPlan.generateWorkoutPlan();
 
     }
 }

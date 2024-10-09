@@ -1,8 +1,8 @@
 package com.fitsass.models;
 
 import com.fitsass.enums.MuscleGroup;
-import com.fitsass.enums.Split;
-import com.fitsass.enums.WorkoutType;
+import com.fitsass.loader.ExerciseLoader;
+import com.fitsass.loader.SplitLoader;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -17,8 +17,8 @@ public class WorkoutPlan {
     public WorkoutPlan(int frequency, UserPreference userPreference) {
         this.frequency = frequency;
         session = new ArrayList<>();
-        split = getSplitFromFrequency();
         this.userPreference = userPreference;
+        split = getSplitFromFrequency();
 
     }
 
@@ -34,11 +34,10 @@ public class WorkoutPlan {
     }
 
     public Split getSplitFromFrequency() {
-        List<Split> splits = List.of(Split.values());
-
         List<Split> matchingSplits = new ArrayList<>();
+        List<Split> splits = new SplitLoader().loadSplits();
         for (Split split : splits) {
-            if (split.getDays() == frequency) {
+            if (split.getDays() == frequency && split.getWorkoutType().equals(userPreference.getExercisePreference())) {
                 matchingSplits.add(split);
             }
         }
@@ -54,7 +53,7 @@ public class WorkoutPlan {
         System.out.println("Multiple workout splits are available for the frequency of " + frequency + " days. Please choose one:");
 
         for (int i = 0; i < matchingSplits.size(); i++) {
-            System.out.println((i + 1) + ": " + matchingSplits.get(i).toString() + " " + matchingSplits.get(i).getDescription());
+            System.out.println((i + 1) + ": " + matchingSplits.get(i).getName() + " " + matchingSplits.get(i).getDescription());
         }
 
         Scanner scanner = new Scanner(System.in);
@@ -72,17 +71,20 @@ public class WorkoutPlan {
     }
 
 
-    public void generateWorkoutPlan(List<Exercise> exercises) {
+    public void generateWorkoutPlan() {
+        ExerciseLoader loader = new ExerciseLoader();
+        List<Exercise> exercises = loader.loadExercises();
         if (split == null) {
             System.out.println("No workout split available for this frequency: " + frequency);
             return;
         }
 
         for (int i = 1; i <= frequency; i++) {
-            List<MuscleGroup> muscleGroupsForDay = split.getMuscleGroupsPerDay().get(i);
+           List<MuscleGroup> muscleGroupsForDay = split.getMuscleGroupsPerDay().get(i);
             WorkoutSession workoutSession = new WorkoutSession("Day " + i, userPreference.getExercisePreference(), muscleGroupsForDay);
             if (muscleGroupsForDay != null && !muscleGroupsForDay.isEmpty()) {
                 workoutSession.generateSession(3, exercises, userPreference);
+                //@ todo number of exercise should be configurable
             } else {
                 System.out.println("No muscle groups defined for Day " + i);
             }

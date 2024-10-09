@@ -22,5 +22,9 @@ public enum Muscle {
     ABDUCTORS,
     UPPER_ABS,
     LOWER_ABS,
-    OBLIQUES
+    OBLIQUES,
+    CARDIO,
+    ABS,
+    FLEXIBILITY,
+    BALANCE,
 }
