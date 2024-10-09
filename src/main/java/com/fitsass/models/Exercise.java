@@ -2,6 +2,7 @@ package com.fitsass.models;
 
 import com.fitsass.enums.Muscle;
 import com.fitsass.enums.MuscleGroup;
+import com.fitsass.enums.WorkoutType;
 
 public class Exercise {
     private String name;
@@ -11,6 +12,7 @@ public class Exercise {
     private int difficulty;
     private MuscleGroup mainMuscleGroup;
     private Muscle specificity;
+    private WorkoutType type;
 
     public String getName() {
         return name;
@@ -72,10 +74,19 @@ public class Exercise {
         System.out.println("--------------------");
         System.out.println("Exercise:   " + name);
         System.out.println("Specifity:  " + specificity);
-        System.out.println("Muscle Group: " + mainMuscleGroup);
+        System.out.println("Muscles:    " + mainMuscleGroup);
+        System.out.println("Type:       " + type);
         System.out.println("Sets:       " + sets);
         System.out.println("Reps:       " + reps);
         System.out.println("Duration:   " + duration + " minutes");
         System.out.println("Difficulty: " + (difficulty == 0 ? "Beginner" : difficulty == 1 ? "Intermediate" : "Advanced"));
+    }
+
+    public WorkoutType getType() {
+        return type;
+    }
+
+    public void setType(WorkoutType type) {
+        this.type = type;
     }
 }

@@ -151,11 +151,10 @@ public class UserPreference {
         while (limitation == null) {
             // Afficher toutes les limitations disponibles avec leur numéro correspondant
             System.out.println("Enter your physical limitation: ");
-            System.out.println("[0] None");
 
             // Afficher les options à partir de l'énumération PhysicalLimitations
             for (int i = 0; i < limitations.length; i++) {
-                System.out.println("[" + (i + 1) + "] " + limitations[i].name() + " - " + limitations[i].getDescription());
+                System.out.println("[" + (i) + "] " + limitations[i].name() + " - " + limitations[i].getDescription());
             }
 
             try {
@@ -163,9 +162,10 @@ public class UserPreference {
                 int limitationInput = getValidIntInput(scanner, "Enter the number corresponding to your limitation: ", 0, limitations.length);
 
                 if (limitationInput == 0) {
+                    limitation = limitations[0]; // Aucune limitation physique
                     System.out.println("No physical limitations selected.");
                 } else {
-                    limitation = limitations[limitationInput - 1]; // Sélection de la limitation choisie
+                    limitation = limitations[limitationInput]; // Sélection de la limitation choisie
                     System.out.println("Selected limitation: " + limitation.getDescription());
                 }
             } catch (NumberFormatException e) {

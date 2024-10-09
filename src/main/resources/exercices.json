@@ -2,301 +2,301 @@
   {
     "name": "Squat",
     "difficulty": 1,
-    "type": "Strength",
+    "type": "WEIGHTLIFTING",
     "mainMuscleGroup": "LEGS",
     "specificity": "QUADS"
   },
   {
     "name": "Deadlift",
     "difficulty": 0,
-    "type": "Strength",
+    "type": "WEIGHTLIFTING",
     "mainMuscleGroup": "BACK",
     "specificity": "LOWER_BACK"
   },
   {
     "name": "Bench Press",
     "difficulty": 1,
-    "type": "Strength",
+    "type": "WEIGHTLIFTING",
     "mainMuscleGroup": "CHEST",
     "specificity": "UPPER_CHEST"
   },
   {
     "name": "Pull-up",
     "difficulty": 0,
-    "type": "Strength",
+    "type": "WEIGHTLIFTING",
     "mainMuscleGroup": "BACK",
     "specificity": "LATS"
   },
   {
     "name": "Push-up",
     "difficulty": 1,
-    "type": "Strength",
+    "type": "WEIGHTLIFTING",
     "mainMuscleGroup": "CHEST",
     "specificity": "LOWER_CHEST"
   },
   {
     "name": "Lunges",
     "difficulty": 0,
-    "type": "Strength",
+    "type": "WEIGHTLIFTING",
     "mainMuscleGroup": "LEGS",
     "specificity": "QUADS"
   },
   {
     "name": "Dumbbell Shoulder Press",
     "difficulty": 1,
-    "type": "Strength",
+    "type": "WEIGHTLIFTING",
     "mainMuscleGroup": "SHOULDERS",
     "specificity": "FRONT_DELTS"
   },
   {
     "name": "Bicep Curl",
     "difficulty": 0,
-    "type": "Strength",
+    "type": "WEIGHTLIFTING",
     "mainMuscleGroup": "ARMS",
     "specificity": "BICEPS"
   },
   {
     "name": "Tricep Dips",
     "difficulty": 1,
-    "type": "Strength",
+    "type": "WEIGHTLIFTING",
     "mainMuscleGroup": "ARMS",
     "specificity": "TRICEPS"
   },
   {
     "name": "Lat Pulldown",
     "difficulty": 0,
-    "type": "Strength",
+    "type": "WEIGHTLIFTING",
     "mainMuscleGroup": "BACK",
     "specificity": "LATS"
   },
   {
     "name": "Leg Press",
     "difficulty": 1,
-    "type": "Strength",
+    "type": "WEIGHTLIFTING",
     "mainMuscleGroup": "LEGS",
     "specificity": "QUADS"
   },
   {
     "name": "Chest Fly",
     "difficulty": 1,
-    "type": "Strength",
+    "type": "WEIGHTLIFTING",
     "mainMuscleGroup": "CHEST",
     "specificity": "UPPER_CHEST"
   },
   {
     "name": "Barbell Row",
     "difficulty": 0,
-    "type": "Strength",
+    "type": "WEIGHTLIFTING",
     "mainMuscleGroup": "BACK",
     "specificity": "UPPER_BACK"
   },
   {
     "name": "Dumbbell Row",
     "difficulty": 1,
-    "type": "Strength",
+    "type": "WEIGHTLIFTING",
     "mainMuscleGroup": "BACK",
     "specificity": "LATS"
   },
   {
     "name": "Romanian Deadlift",
     "difficulty": 0,
-    "type": "Strength",
+    "type": "WEIGHTLIFTING",
     "mainMuscleGroup": "LEGS",
     "specificity": "HAMSTRINGS"
   },
   {
     "name": "Cable Tricep Pushdown",
     "difficulty": 0,
-    "type": "Strength",
+    "type": "WEIGHTLIFTING",
     "mainMuscleGroup": "ARMS",
     "specificity": "TRICEPS"
   },
   {
     "name": "Dumbbell Lateral Raise",
     "difficulty": 1,
-    "type": "Strength",
+    "type": "WEIGHTLIFTING",
     "mainMuscleGroup": "SHOULDERS",
     "specificity": "SIDE_DELTS"
   },
   {
     "name": "Seated Row",
     "difficulty": 0,
-    "type": "Strength",
+    "type": "WEIGHTLIFTING",
     "mainMuscleGroup": "BACK",
     "specificity": "UPPER_BACK"
   },
   {
     "name": "Incline Bench Press",
     "difficulty": 1,
-    "type": "Strength",
+    "type": "WEIGHTLIFTING",
     "mainMuscleGroup": "CHEST",
     "specificity": "UPPER_CHEST"
   },
   {
     "name": "Leg Curl",
     "difficulty": 0,
-    "type": "Strength",
+    "type": "WEIGHTLIFTING",
     "mainMuscleGroup": "LEGS",
     "specificity": "HAMSTRINGS"
   },
   {
     "name": "Leg Extension",
     "difficulty": 0,
-    "type": "Strength",
+    "type": "WEIGHTLIFTING",
     "mainMuscleGroup": "LEGS",
     "specificity": "QUADS"
   },
   {
     "name": "Bulgarian Split Squat",
     "difficulty": 0,
-    "type": "Strength",
+    "type": "WEIGHTLIFTING",
     "mainMuscleGroup": "LEGS",
     "specificity": "QUADS"
   },
   {
     "name": "Hammer Curl",
     "difficulty": 1,
-    "type": "Strength",
+    "type": "WEIGHTLIFTING",
     "mainMuscleGroup": "ARMS",
     "specificity": "BICEPS"
   },
   {
     "name": "Overhead Tricep Extension",
     "difficulty": 1,
-    "type": "Strength",
+    "type": "WEIGHTLIFTING",
     "mainMuscleGroup": "ARMS",
     "specificity": "TRICEPS"
   },
   {
     "name": "Dumbbell Chest Press",
     "difficulty": 1,
-    "type": "Strength",
+    "type": "WEIGHTLIFTING",
     "mainMuscleGroup": "CHEST",
     "specificity": "LOWER_CHEST"
   },
   {
     "name": "Face Pull",
     "difficulty": 1,
-    "type": "Strength",
+    "type": "WEIGHTLIFTING",
     "mainMuscleGroup": "SHOULDERS",
     "specificity": "REAR_DELTS"
   },
   {
     "name": "Shrugs",
     "difficulty": 0,
-    "type": "Strength",
+    "type": "WEIGHTLIFTING",
     "mainMuscleGroup": "TRAPS",
     "specificity": "TRAPS"
   },
   {
     "name": "Cable Chest Fly",
     "difficulty": 1,
-    "type": "Strength",
+    "type": "WEIGHTLIFTING",
     "mainMuscleGroup": "CHEST",
     "specificity": "LOWER_CHEST"
   },
   {
     "name": "Arnold Press",
     "difficulty": 0,
-    "type": "Strength",
+    "type": "WEIGHTLIFTING",
     "mainMuscleGroup": "SHOULDERS",
     "specificity": "FRONT_DELTS"
   },
   {
     "name": "Zercher Squat",
     "difficulty": 0,
-    "type": "Strength",
+    "type": "WEIGHTLIFTING",
     "mainMuscleGroup": "LEGS",
     "specificity": "QUADS"
   },
   {
     "name": "Dumbbell Pullover",
     "difficulty": 1,
-    "type": "Strength",
+    "type": "WEIGHTLIFTING",
     "mainMuscleGroup": "CHEST",
     "specificity": "UPPER_CHEST"
   },
   {
     "name": "Pec Deck Machine",
     "difficulty": 0,
-    "type": "Strength",
+    "type": "WEIGHTLIFTING",
     "mainMuscleGroup": "CHEST",
     "specificity": "INNER_CHEST"
   },
   {
     "name": "Goblet Squat",
     "difficulty": 0,
-    "type": "Strength",
+    "type": "WEIGHTLIFTING",
     "mainMuscleGroup": "LEGS",
     "specificity": "QUADS"
   },
   {
     "name": "Reverse Lunge",
     "difficulty": 1,
-    "type": "Strength",
+    "type": "WEIGHTLIFTING",
     "mainMuscleGroup": "LEGS",
     "specificity": "GLUTES"
   },
   {
     "name": "Incline Dumbbell Curl",
     "difficulty": 1,
-    "type": "Strength",
+    "type": "WEIGHTLIFTING",
     "mainMuscleGroup": "ARMS",
     "specificity": "BICEPS"
   },
   {
     "name": "Incline Dumbbell Press",
     "difficulty": 1,
-    "type": "Strength",
+    "type": "WEIGHTLIFTING",
     "mainMuscleGroup": "CHEST",
     "specificity": "UPPER_CHEST"
   },
   {
     "name": "Bent Over Row",
     "difficulty": 0,
-    "type": "Strength",
+    "type": "WEIGHTLIFTING",
     "mainMuscleGroup": "BACK",
     "specificity": "UPPER_BACK"
   },
   {
     "name": "Good Morning",
     "difficulty": 0,
-    "type": "Strength",
+    "type": "WEIGHTLIFTING",
     "mainMuscleGroup": "LEGS",
     "specificity": "HAMSTRINGS"
   },
   {
     "name": "Forearm Curl",
     "difficulty": 0,
-    "type": "Strength",
+    "type": "WEIGHTLIFTING",
     "mainMuscleGroup": "ARMS",
     "specificity": "FOREARMS"
   },
   {
     "name": "Hip Thrust",
     "difficulty": 1,
-    "type": "Strength",
+    "type": "WEIGHTLIFTING",
     "mainMuscleGroup": "LEGS",
     "specificity": "GLUTES"
   },
   {
     "name": "Adductor Machine",
     "difficulty": 0,
-    "type": "Strength",
+    "type": "WEIGHTLIFTING",
     "mainMuscleGroup": "LEGS",
     "specificity": "ADDUCTORS"
   },
   {
     "name": "Abductor Machine",
     "difficulty": 0,
-    "type": "Strength",
+    "type": "WEIGHTLIFTING",
     "mainMuscleGroup": "LEGS",
     "specificity": "ABDUCTORS"
   },
   {
     "name": "Standing Calf Raise",
     "difficulty": 0,
-    "type": "Strength",
+    "type": "WEIGHTLIFTING",
     "mainMuscleGroup": "LEGS",
     "specificity": "CALVES"
   }

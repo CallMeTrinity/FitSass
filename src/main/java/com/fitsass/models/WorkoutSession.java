@@ -61,11 +61,9 @@ public class WorkoutSession {
             adjustDifficulty(userPreference);
 
             for (Exercise exercise : exercises) {
-                if (
-                                ((exercise.getMainMuscleGroup().equals(muscleGroup) || muscleGroup.equals(MuscleGroup.FULL_BODY))
-                                        && muscleExerciseMap.containsKey(exercise.getSpecificity()))
-                                && exercise.getDifficulty() == difficulty
-                ) {
+                if (((exercise.getMainMuscleGroup().equals(muscleGroup) || muscleGroup.equals(MuscleGroup.FULL_BODY))
+                                && muscleExerciseMap.containsKey(exercise.getSpecificity()))
+                                && exercise.getDifficulty() == difficulty && exercise.getType().equals(type)) {
                     muscleExerciseMap.get(exercise.getSpecificity()).add(exercise);
                 }
             }

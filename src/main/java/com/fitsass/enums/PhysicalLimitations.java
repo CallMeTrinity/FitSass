@@ -1,6 +1,7 @@
 package com.fitsass.enums;
 
 public enum PhysicalLimitations {
+    NONE("No physical limitations."),
     KNEE_PAIN("Knee pain - Avoid high-impact exercises like jumping or running."),
     LOWER_BACK_PAIN("Lower back pain - Focus on core strength, avoid heavy deadlifts."),
     SHOULDER_ISSUES("Shoulder issues - Be careful with overhead pressing exercises."),

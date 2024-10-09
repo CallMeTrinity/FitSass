@@ -24,6 +24,7 @@ public class WorkoutPlan {
 
     public void printWorkoutPlan() {
         for (WorkoutSession workoutSession : session) {
+            System.out.println("GENERATING WORKOUT PLAN FOR " + userPreference.getName());
             workoutSession.printWorkoutSession();
         }
     }
@@ -79,7 +80,7 @@ public class WorkoutPlan {
 
         for (int i = 1; i <= frequency; i++) {
             List<MuscleGroup> muscleGroupsForDay = split.getMuscleGroupsPerDay().get(i);
-            WorkoutSession workoutSession = new WorkoutSession("Day " + i, WorkoutType.WEIGHTLIFTING, muscleGroupsForDay);
+            WorkoutSession workoutSession = new WorkoutSession("Day " + i, userPreference.getExercisePreference(), muscleGroupsForDay);
             if (muscleGroupsForDay != null && !muscleGroupsForDay.isEmpty()) {
                 workoutSession.generateSession(3, exercises, userPreference);
             } else {
