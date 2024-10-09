@@ -2,7 +2,10 @@ package com.fitsass.models;
 
 import com.fitsass.enums.Muscle;
 import com.fitsass.enums.MuscleGroup;
+import com.fitsass.enums.PhysicalLimitations;
 import com.fitsass.enums.WorkoutType;
+
+import java.util.List;
 
 public class Exercise {
     private String name;
@@ -13,6 +16,7 @@ public class Exercise {
     private MuscleGroup mainMuscleGroup;
     private Muscle specificity;
     private WorkoutType type;
+    private List<PhysicalLimitations> limitations;
 
     public String getName() {
         return name;
@@ -76,6 +80,7 @@ public class Exercise {
         System.out.println("Specifity:  " + specificity);
         System.out.println("Muscles:    " + mainMuscleGroup);
         System.out.println("Type:       " + type);
+        System.out.println("Limitations: " + limitations.toString());
         System.out.println("Sets:       " + sets);
         System.out.println("Reps:       " + reps);
         System.out.println("Duration:   " + duration + " minutes");
@@ -88,5 +93,13 @@ public class Exercise {
 
     public void setType(WorkoutType type) {
         this.type = type;
+    }
+
+    public List<PhysicalLimitations> getLimitations() {
+        return limitations;
+    }
+
+    public void setLimitations(List<PhysicalLimitations> limitations) {
+        this.limitations = limitations;
     }
 }

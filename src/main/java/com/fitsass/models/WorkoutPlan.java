@@ -23,8 +23,8 @@ public class WorkoutPlan {
     }
 
     public void printWorkoutPlan() {
+        System.out.println("GENERATING WORKOUT PLAN FOR " + userPreference.getName());
         for (WorkoutSession workoutSession : session) {
-            System.out.println("GENERATING WORKOUT PLAN FOR " + userPreference.getName());
             workoutSession.printWorkoutSession();
         }
     }

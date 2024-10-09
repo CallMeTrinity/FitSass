@@ -2,6 +2,7 @@ package com.fitsass.models;
 
 import com.fitsass.enums.Muscle;
 import com.fitsass.enums.MuscleGroup;
+import com.fitsass.enums.PhysicalLimitations;
 import com.fitsass.enums.WorkoutType;
 
 import java.util.*;
@@ -61,12 +62,23 @@ public class WorkoutSession {
             adjustDifficulty(userPreference);
 
             for (Exercise exercise : exercises) {
-                if (((exercise.getMainMuscleGroup().equals(muscleGroup) || muscleGroup.equals(MuscleGroup.FULL_BODY))
-                                && muscleExerciseMap.containsKey(exercise.getSpecificity()))
-                                && exercise.getDifficulty() == difficulty && exercise.getType().equals(type)) {
-                    muscleExerciseMap.get(exercise.getSpecificity()).add(exercise);
+                if (((exercise.getMainMuscleGroup().equals(muscleGroup) || muscleGroup.equals(MuscleGroup.FULL_BODY)) && muscleExerciseMap.containsKey(exercise.getSpecificity())) && exercise.getDifficulty() <= difficulty && exercise.getType().equals(type)) {
+                    System.out.println("##"+exercise.getName() + "selected");
+                    boolean isLimited = false;
+
+                    for (PhysicalLimitations userLimitation : userPreference.getPhysicalLimitations()) {
+                        if (exercise.getLimitations().contains(userLimitation)) {
+                            isLimited = true;
+                            break;
+                        }
+                    }
+
+                    if (!isLimited) {
+                        muscleExerciseMap.get(exercise.getSpecificity()).add(exercise);
+                    }
                 }
             }
+
 
             for (List<Exercise> muscleSpecificExercises : muscleExerciseMap.values()) {
                 Collections.shuffle(muscleSpecificExercises);
@@ -90,7 +102,6 @@ public class WorkoutSession {
 
                     for (Muscle muscle : muscleGroup.getMuscles()) {
                         List<Exercise> muscleSpecificExercises = muscleExerciseMap.get(muscle);
-
                         if (!muscleSpecificExercises.isEmpty() && exercisesAdded < numberOfExercises) {
                             Exercise selectedExercise = muscleSpecificExercises.removeFirst();
                             addExercise(selectedExercise);

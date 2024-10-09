@@ -13,7 +13,6 @@ public class App
     {
 
         UserPreference userPreference = new UserPreference();
-        userPreference.printUserPreference();
 
         ExerciseLoader loader = new ExerciseLoader();
         List<Exercise> exercises = loader.loadExercises("./src/main/resources/exercices.json");
