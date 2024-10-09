@@ -4,7 +4,6 @@ import com.fitsass.enums.FitnessGoal;
 import com.fitsass.enums.PhysicalLimitations;
 import com.fitsass.enums.WorkoutType;
 
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class UserPreference {
@@ -164,7 +163,6 @@ public class UserPreference {
                 int limitationInput = getValidIntInput(scanner, "Enter the number corresponding to your limitation: ", 0, limitations.length);
 
                 if (limitationInput == 0) {
-                    limitation = null; // Aucun problème physique sélectionné
                     System.out.println("No physical limitations selected.");
                 } else {
                     limitation = limitations[limitationInput - 1]; // Sélection de la limitation choisie

@@ -9,14 +9,16 @@ import java.util.*;
 public class WorkoutSession {
     private final String name;
     private final List<Exercise> exercises;
-    private WorkoutType type;
     private final List<MuscleGroup> muscleGroups;
+    private WorkoutType type;
+    private int difficulty;
 
     public WorkoutSession(String name, WorkoutType type, List<MuscleGroup> muscleGroups) {
         this.name = name;
         this.type = type;
         this.exercises = new ArrayList<>();
         this.muscleGroups = muscleGroups;
+        this.difficulty = 0;
     }
 
     public void addExercise(Exercise exercise) {
@@ -38,7 +40,17 @@ public class WorkoutSession {
         this.type = type;
     }
 
-    public void generateSession(int numberOfExercises, List<Exercise> exercises) {
+    public void adjustDifficulty(UserPreference userPreference) {
+        if (userPreference.getExperienceLevel() <= 1) {
+            difficulty = 0;
+        } else if (userPreference.getExperienceLevel() <= 3) {
+            difficulty = 1;
+        } else {
+            difficulty = 2;
+        }
+    }
+
+    public void generateSession(int numberOfExercises, List<Exercise> exercises, UserPreference userPreference) {
         for (MuscleGroup muscleGroup : muscleGroups) {
             Map<Muscle, List<Exercise>> muscleExerciseMap = new HashMap<>();
 
@@ -46,8 +58,14 @@ public class WorkoutSession {
                 muscleExerciseMap.put(muscle, new ArrayList<>());
             }
 
+            adjustDifficulty(userPreference);
+
             for (Exercise exercise : exercises) {
-                if ((exercise.getMainMuscleGroup().equals(muscleGroup) || muscleGroup.equals(MuscleGroup.FULL_BODY)) && muscleExerciseMap.containsKey(exercise.getSpecificity())) {
+                if (
+                                ((exercise.getMainMuscleGroup().equals(muscleGroup) || muscleGroup.equals(MuscleGroup.FULL_BODY))
+                                        && muscleExerciseMap.containsKey(exercise.getSpecificity()))
+                                && exercise.getDifficulty() == difficulty
+                ) {
                     muscleExerciseMap.get(exercise.getSpecificity()).add(exercise);
                 }
             }
@@ -88,5 +106,12 @@ public class WorkoutSession {
     }
 
 
+    public int getDifficulty() {
+        return difficulty;
+    }
+
+    public void setDifficulty(int difficulty) {
+        this.difficulty = difficulty;
+    }
 }
 

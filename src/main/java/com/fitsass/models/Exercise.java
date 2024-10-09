@@ -8,7 +8,7 @@ public class Exercise {
     private int sets;
     private int reps;
     private String duration;
-    private String difficulty;
+    private int difficulty;
     private MuscleGroup mainMuscleGroup;
     private Muscle specificity;
 
@@ -36,11 +36,11 @@ public class Exercise {
         this.sets = sets;
     }
 
-    public String getDifficulty() {
+    public int getDifficulty() {
         return difficulty;
     }
 
-    public void setDifficulty(String difficulty) {
+    public void setDifficulty(int difficulty) {
         this.difficulty = difficulty;
     }
 
@@ -76,6 +76,6 @@ public class Exercise {
         System.out.println("Sets:       " + sets);
         System.out.println("Reps:       " + reps);
         System.out.println("Duration:   " + duration + " minutes");
-        System.out.println("Difficulty: " + difficulty);
+        System.out.println("Difficulty: " + (difficulty == 0 ? "Beginner" : difficulty == 1 ? "Intermediate" : "Advanced"));
     }
 }

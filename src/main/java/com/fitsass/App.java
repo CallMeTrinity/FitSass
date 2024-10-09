@@ -14,13 +14,12 @@ public class App
 
         UserPreference userPreference = new UserPreference();
         userPreference.printUserPreference();
-        System.exit(0);
 
         ExerciseLoader loader = new ExerciseLoader();
         List<Exercise> exercises = loader.loadExercises("./src/main/resources/exercices.json");
 
 
-        WorkoutPlan workoutPlan = new WorkoutPlan(userPreference.getWeeklyWorkoutFrequency());
+        WorkoutPlan workoutPlan = new WorkoutPlan(userPreference.getWeeklyWorkoutFrequency(), userPreference);
         workoutPlan.generateWorkoutPlan(exercises);
 
     }

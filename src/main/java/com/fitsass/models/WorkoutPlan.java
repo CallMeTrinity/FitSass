@@ -10,32 +10,20 @@ import java.util.Scanner;
 
 public class WorkoutPlan {
     private final int frequency;
-    List<WorkoutSession> session;
-    private String difficulty;
     private final Split split;
+    private final UserPreference userPreference;
+    List<WorkoutSession> session;
 
-    public WorkoutPlan(int frequency) {
+    public WorkoutPlan(int frequency, UserPreference userPreference) {
         this.frequency = frequency;
         session = new ArrayList<>();
         split = getSplitFromFrequency();
+        this.userPreference = userPreference;
 
-    }
-
-    public void adjustDifficulty(UserPreference userPreference) {
-        userPreference.getExperienceLevel();
-
-        if (userPreference.getExperienceLevel() < 1) {
-            difficulty = "Beginner";
-        } else if (userPreference.getExperienceLevel() < 3) {
-            difficulty = "Intermediate";
-        } else {
-            difficulty = "Advanced";
-        }
     }
 
     public void printWorkoutPlan() {
         for (WorkoutSession workoutSession : session) {
-            System.out.println("Workout Plan Difficulty: " + difficulty);
             workoutSession.printWorkoutSession();
         }
     }
@@ -65,7 +53,7 @@ public class WorkoutPlan {
         System.out.println("Multiple workout splits are available for the frequency of " + frequency + " days. Please choose one:");
 
         for (int i = 0; i < matchingSplits.size(); i++) {
-            System.out.println((i + 1) + ": "+ matchingSplits.get(i).toString() + " " + matchingSplits.get(i).getDescription());
+            System.out.println((i + 1) + ": " + matchingSplits.get(i).toString() + " " + matchingSplits.get(i).getDescription());
         }
 
         Scanner scanner = new Scanner(System.in);
@@ -93,7 +81,7 @@ public class WorkoutPlan {
             List<MuscleGroup> muscleGroupsForDay = split.getMuscleGroupsPerDay().get(i);
             WorkoutSession workoutSession = new WorkoutSession("Day " + i, WorkoutType.WEIGHTLIFTING, muscleGroupsForDay);
             if (muscleGroupsForDay != null && !muscleGroupsForDay.isEmpty()) {
-                workoutSession.generateSession(3, exercises);
+                workoutSession.generateSession(3, exercises, userPreference);
             } else {
                 System.out.println("No muscle groups defined for Day " + i);
             }
