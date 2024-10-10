@@ -153,6 +153,10 @@ public class WorkoutSession {
         }
     }
 
+    public List<Exercise> getExercises() {
+        return exercises;
+    }
+
 
     public int getDifficulty() {
         return difficulty;
