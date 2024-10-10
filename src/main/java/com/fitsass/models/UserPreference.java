@@ -19,30 +19,15 @@ public class UserPreference {
     private double height;
 
 
-    public UserPreference() {
-        Scanner scanner = new Scanner(System.in);
-
-
+    public UserPreference(Scanner scanner) {
         System.out.println("Enter your name: ");
         name = scanner.nextLine();
-
-
         experienceLevel = getValidIntInput(scanner, "Enter your experience level in years (0-10): ", 0, 10);
-
-
         goal = getValidGoal(scanner);
-
-
         weeklyWorkoutFrequency = getValidIntInput(scanner, "Enter your desired weekly workout frequency (1-7): ", 1, 7);
-
-
         exercisePreference = getValidExercisePreference(scanner);
-
-
         System.out.println("Do you have any physical limitations (Knee pain, Back issues, etc.)? If none, enter 'None': ");
         physicalLimitations = getValidPhysicalLimitations(scanner);
-
-
         currentWeight = getValidIntInput(scanner, "Enter your current weight (in kg): ", 30, 300);
         height = getValidDoubleInput(scanner, "Enter your height (in meters): ", 1.2, 2.5);
     }
