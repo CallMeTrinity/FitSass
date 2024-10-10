@@ -212,6 +212,23 @@ public class UserPreference {
         }
     }
 
+    public int getAverageExercisePerMuscleGroup(){
+        int baseNumber = 2;
+
+        if (experienceLevel > 2) baseNumber += 1;
+        if (experienceLevel > 4) baseNumber += 1;
+
+        if (weeklyWorkoutFrequency <= 2) baseNumber += 2;
+        else if (weeklyWorkoutFrequency <= 4) baseNumber += 1;
+
+        switch (goal) {
+            case GAIN_MUSCLE, LOSE_WEIGHT, MAINGAIN -> baseNumber += 1;
+            case FLEXIBILITY, ENDURANCE -> baseNumber -= 1;
+        }
+
+        return Math.min(baseNumber, 5);
+    }
+
 
     public int getExperienceLevel() {
         return experienceLevel;
