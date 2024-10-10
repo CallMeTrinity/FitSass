@@ -52,6 +52,43 @@ public class WorkoutSession {
     }
 
     public void generateSession(int numberOfExercises, List<Exercise> exercises, UserPreference userPreference) {
+        int reps = 0;
+        int sets = 0;
+        double intensity = 0.0;
+
+        switch (userPreference.getGoal()) {
+            case LOSE_WEIGHT -> {
+                reps = 12;
+                sets = 3;
+                intensity = 0.6;
+            }
+            case GAIN_MUSCLE -> {
+                reps = 8;
+                sets = 4;
+                intensity = 0.8;
+            }
+            case MAINGAIN -> {
+                reps = 10;
+                sets = 3;
+                intensity = 0.7;
+            }
+            case ENDURANCE -> {
+                reps = 15;
+                sets = 2;
+                intensity = 0.5;
+            }
+            case RUN_FASTER, RUN_LONGER -> {
+                reps = 20;
+                sets = 2;
+                intensity = 0.4;
+            }
+            case FLEXIBILITY -> {
+                reps = 12;
+                sets = 2;
+                intensity = 0.5;
+            }
+        }
+
         for (MuscleGroup muscleGroup : muscleGroups) {
             Map<Muscle, List<Exercise>> muscleExerciseMap = new HashMap<>();
 
@@ -62,10 +99,6 @@ public class WorkoutSession {
             adjustDifficulty(userPreference);
 
             for (Exercise exercise : exercises) {
-                if (exercise.getMainMuscleGroup() == null) {
-                    System.out.println("Exercise " + exercise.getName() + " does not have a main muscle group.");
-                    System.exit(0);
-                }
                 if (((exercise.getMainMuscleGroup().equals(muscleGroup) || muscleGroup.equals(MuscleGroup.FULL_BODY)) && muscleExerciseMap.containsKey(exercise.getSpecificity())) && exercise.getDifficulty() <= difficulty && exercise.getType().equals(type)) {
                     boolean isLimited = false;
 
@@ -107,6 +140,9 @@ public class WorkoutSession {
                         List<Exercise> muscleSpecificExercises = muscleExerciseMap.get(muscle);
                         if (!muscleSpecificExercises.isEmpty() && exercisesAdded < numberOfExercises) {
                             Exercise selectedExercise = muscleSpecificExercises.removeFirst();
+                            selectedExercise.setReps(reps);
+                            selectedExercise.setSets(sets);
+                            selectedExercise.setIntensity(intensity);
                             addExercise(selectedExercise);
                             exercisesAdded++;
                             musclesAvailable = true;

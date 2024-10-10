@@ -17,6 +17,7 @@ public class Exercise {
     private Muscle specificity;
     private WorkoutType type;
     private List<PhysicalLimitations> limitations;
+    private double intensity;
 
     public String getName() {
         return name;
@@ -77,13 +78,11 @@ public class Exercise {
     public void printExercise() {
         System.out.println("--------------------");
         System.out.println("Exercise:   " + name);
-        System.out.println("Specifity:  " + specificity);
-        System.out.println("Muscles:    " + mainMuscleGroup);
-        System.out.println("Type:       " + type);
-        System.out.println("Limitations: " + limitations.toString());
+        System.out.println("Muscle:     " + specificity);
         System.out.println("Sets:       " + sets);
         System.out.println("Reps:       " + reps);
         System.out.println("Duration:   " + duration + " minutes");
+        System.out.println("Intensity:  " + intensity);
         System.out.println("Difficulty: " + (difficulty == 0 ? "Beginner" : difficulty == 1 ? "Intermediate" : "Advanced"));
     }
 
@@ -101,5 +100,13 @@ public class Exercise {
 
     public void setLimitations(List<PhysicalLimitations> limitations) {
         this.limitations = limitations;
+    }
+
+    public double getIntensity() {
+        return intensity;
+    }
+
+    public void setIntensity(double intensity) {
+        this.intensity = intensity;
     }
 }
