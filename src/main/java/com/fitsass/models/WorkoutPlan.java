@@ -84,7 +84,7 @@ public class WorkoutPlan {
             WorkoutSession workoutSession = new WorkoutSession("Day " + i, userPreference.getExercisePreference(), muscleGroupsForDay);
             if (muscleGroupsForDay != null && !muscleGroupsForDay.isEmpty()) {
                 workoutSession.generateSession(3, exercises, userPreference);
-                //@ todo number of exercise should be configurable
+                //@ todo number of exercises should be configurable
             } else {
                 System.out.println("No muscle groups defined for Day " + i);
             }
