@@ -2,15 +2,22 @@ package com.fitsass.models;
 
 import com.fitsass.enums.Muscle;
 import com.fitsass.enums.MuscleGroup;
+import com.fitsass.enums.PhysicalLimitations;
+import com.fitsass.enums.WorkoutType;
+
+import java.util.List;
 
 public class Exercise {
     private String name;
     private int sets;
     private int reps;
     private String duration;
-    private String difficulty;
+    private int difficulty;
     private MuscleGroup mainMuscleGroup;
     private Muscle specificity;
+    private WorkoutType type;
+    private List<PhysicalLimitations> limitations;
+    private double intensity;
 
     public String getName() {
         return name;
@@ -36,11 +43,11 @@ public class Exercise {
         this.sets = sets;
     }
 
-    public String getDifficulty() {
+    public int getDifficulty() {
         return difficulty;
     }
 
-    public void setDifficulty(String difficulty) {
+    public void setDifficulty(int difficulty) {
         this.difficulty = difficulty;
     }
 
@@ -71,11 +78,35 @@ public class Exercise {
     public void printExercise() {
         System.out.println("--------------------");
         System.out.println("Exercise:   " + name);
-        System.out.println("Specifity:  " + specificity);
-        System.out.println("Muscle Group: " + mainMuscleGroup);
+        System.out.println("Muscle:     " + specificity);
         System.out.println("Sets:       " + sets);
         System.out.println("Reps:       " + reps);
         System.out.println("Duration:   " + duration + " minutes");
-        System.out.println("Difficulty: " + difficulty);
+        System.out.println("Intensity:  " + intensity);
+        System.out.println("Difficulty: " + (difficulty == 0 ? "Beginner" : difficulty == 1 ? "Intermediate" : "Advanced"));
+    }
+
+    public WorkoutType getType() {
+        return type;
+    }
+
+    public void setType(WorkoutType type) {
+        this.type = type;
+    }
+
+    public List<PhysicalLimitations> getLimitations() {
+        return limitations;
+    }
+
+    public void setLimitations(List<PhysicalLimitations> limitations) {
+        this.limitations = limitations;
+    }
+
+    public double getIntensity() {
+        return intensity;
+    }
+
+    public void setIntensity(double intensity) {
+        this.intensity = intensity;
     }
 }

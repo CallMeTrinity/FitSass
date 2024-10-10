@@ -1,41 +1,29 @@
 package com.fitsass.models;
 
 import com.fitsass.enums.MuscleGroup;
-import com.fitsass.enums.Split;
 import com.fitsass.enums.WorkoutType;
+import com.fitsass.loader.ExerciseLoader;
+import com.fitsass.loader.SplitLoader;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Scanner;
+import java.util.*;
 
 public class WorkoutPlan {
     private final int frequency;
-    List<WorkoutSession> session;
-    private String difficulty;
     private final Split split;
+    private final UserPreference userPreference;
+    List<WorkoutSession> session;
 
-    public WorkoutPlan(int frequency) {
+    public WorkoutPlan(int frequency, UserPreference userPreference) {
         this.frequency = frequency;
         session = new ArrayList<>();
+        this.userPreference = userPreference;
         split = getSplitFromFrequency();
 
     }
 
-    public void adjustDifficulty(UserPreference userPreference) {
-        userPreference.getExperienceLevel();
-
-        if (userPreference.getExperienceLevel() < 1) {
-            difficulty = "Beginner";
-        } else if (userPreference.getExperienceLevel() < 3) {
-            difficulty = "Intermediate";
-        } else {
-            difficulty = "Advanced";
-        }
-    }
-
     public void printWorkoutPlan() {
+        System.out.println("GENERATING WORKOUT PLAN FOR " + userPreference.getName());
         for (WorkoutSession workoutSession : session) {
-            System.out.println("Workout Plan Difficulty: " + difficulty);
             workoutSession.printWorkoutSession();
         }
     }
@@ -45,11 +33,10 @@ public class WorkoutPlan {
     }
 
     public Split getSplitFromFrequency() {
-        List<Split> splits = List.of(Split.values());
-
         List<Split> matchingSplits = new ArrayList<>();
+        List<Split> splits = new SplitLoader().loadSplits();
         for (Split split : splits) {
-            if (split.getDays() == frequency) {
+            if (split.getDays() == frequency && split.getWorkoutType().equals(userPreference.getExercisePreference())) {
                 matchingSplits.add(split);
             }
         }
@@ -65,7 +52,7 @@ public class WorkoutPlan {
         System.out.println("Multiple workout splits are available for the frequency of " + frequency + " days. Please choose one:");
 
         for (int i = 0; i < matchingSplits.size(); i++) {
-            System.out.println((i + 1) + ": "+ matchingSplits.get(i).toString() + " " + matchingSplits.get(i).getDescription());
+            System.out.println((i + 1) + ": " + matchingSplits.get(i).getName() + " " + matchingSplits.get(i).getDescription());
         }
 
         Scanner scanner = new Scanner(System.in);
@@ -82,18 +69,44 @@ public class WorkoutPlan {
         return matchingSplits.get(choice - 1);
     }
 
+    private Split generateCustomSplit(UserPreference userPreference) {
+        String name = "Custom Split for " + userPreference.getName();
+        String description = "Custom split generated for " + userPreference.getExercisePreference() + " with a frequency of " + frequency + " days.";
+        String workoutType = userPreference.getExercisePreference().toString();
 
-    public void generateWorkoutPlan(List<Exercise> exercises) {
+        Map<Integer, List<MuscleGroup>> muscleGroupsPerDay = new HashMap<>();
+        for (int i = 1; i <= frequency; i++) {
+            muscleGroupsPerDay.put(i, List.of(MuscleGroup.FULL_BODY));
+        }
+        Split generatedCustomSplit = new Split();
+        generatedCustomSplit.setName(name);
+        generatedCustomSplit.setDescription(description);
+        generatedCustomSplit.setDays(frequency);
+        generatedCustomSplit.setWorkoutType(WorkoutType.valueOf(workoutType));
+        generatedCustomSplit.setMuscleGroupsPerDay(muscleGroupsPerDay);
+
+        return generatedCustomSplit;
+    }
+
+
+    public void generateWorkoutPlan() {
+        ExerciseLoader loader = new ExerciseLoader();
+        List<Exercise> exercises = loader.loadExercises();
+
+        Split customSplit = split;
+
         if (split == null) {
-            System.out.println("No workout split available for this frequency: " + frequency);
-            return;
+            System.out.println("No workout split available for this frequency: " + frequency + ". Generating a custom split...");
+
+            customSplit = generateCustomSplit(userPreference);
         }
 
         for (int i = 1; i <= frequency; i++) {
-            List<MuscleGroup> muscleGroupsForDay = split.getMuscleGroupsPerDay().get(i);
-            WorkoutSession workoutSession = new WorkoutSession("Day " + i, WorkoutType.WEIGHTLIFTING, muscleGroupsForDay);
+            List<MuscleGroup> muscleGroupsForDay = customSplit.getMuscleGroupsPerDay().get(i);
+            WorkoutSession workoutSession = new WorkoutSession("Day " + i, userPreference.getExercisePreference(), muscleGroupsForDay);
+
             if (muscleGroupsForDay != null && !muscleGroupsForDay.isEmpty()) {
-                workoutSession.generateSession(3, exercises);
+                workoutSession.generateSession(userPreference.getAverageExercisePerMuscleGroup(), exercises, userPreference);
             } else {
                 System.out.println("No muscle groups defined for Day " + i);
             }
