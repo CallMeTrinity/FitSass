@@ -5,6 +5,7 @@
     "type": "WEIGHTLIFTING",
     "mainMuscleGroup": "LEGS",
     "specificity": "QUADS",
+    "importance": 1,
     "limitations": [
       "KNEE_PAIN",
       "ANKLE_INJURY",
@@ -17,6 +18,7 @@
     "type": "WEIGHTLIFTING",
     "mainMuscleGroup": "BACK",
     "specificity": "LOWER_BACK",
+    "importance": 1,
     "limitations": [
       "LOWER_BACK_PAIN",
       "HIP_PAIN",
@@ -29,6 +31,7 @@
     "type": "WEIGHTLIFTING",
     "mainMuscleGroup": "CHEST",
     "specificity": "UPPER_CHEST",
+    "importance": 1,
     "limitations": [
       "SHOULDER_ISSUES",
       "ELBOW_PAIN"
@@ -40,6 +43,7 @@
     "type": "WEIGHTLIFTING",
     "mainMuscleGroup": "BACK",
     "specificity": "LATS",
+    "importance": 1,
     "limitations": [
       "SHOULDER_ISSUES",
       "WRIST_PAIN"
@@ -51,6 +55,7 @@
     "type": "WEIGHTLIFTING",
     "mainMuscleGroup": "CHEST",
     "specificity": "LOWER_CHEST",
+    "importance": 3,
     "limitations": [
       "WRIST_PAIN",
       "SHOULDER_ISSUES"
@@ -62,6 +67,7 @@
     "type": "WEIGHTLIFTING",
     "mainMuscleGroup": "LEGS",
     "specificity": "QUADS",
+    "importance": 3,
     "limitations": [
       "KNEE_PAIN",
       "ANKLE_INJURY",
@@ -74,6 +80,7 @@
     "type": "WEIGHTLIFTING",
     "mainMuscleGroup": "SHOULDERS",
     "specificity": "FRONT_DELTS",
+    "importance": 2,
     "limitations": [
       "SHOULDER_ISSUES",
       "ELBOW_PAIN"
@@ -85,6 +92,7 @@
     "type": "WEIGHTLIFTING",
     "mainMuscleGroup": "ARMS",
     "specificity": "BICEPS",
+    "importance": 1,
     "limitations": [
       "ELBOW_PAIN"
     ]
@@ -95,6 +103,7 @@
     "type": "WEIGHTLIFTING",
     "mainMuscleGroup": "ARMS",
     "specificity": "TRICEPS",
+    "importance": 1,
     "limitations": [
       "WRIST_PAIN",
       "SHOULDER_ISSUES"
@@ -106,6 +115,7 @@
     "type": "WEIGHTLIFTING",
     "mainMuscleGroup": "BACK",
     "specificity": "LATS",
+    "importance": 2,
     "limitations": [
       "SHOULDER_ISSUES"
     ]
@@ -116,6 +126,7 @@
     "type": "WEIGHTLIFTING",
     "mainMuscleGroup": "LEGS",
     "specificity": "QUADS",
+    "importance": 2,
     "limitations": [
       "KNEE_PAIN",
       "ANKLE_INJURY",
@@ -128,6 +139,7 @@
     "type": "WEIGHTLIFTING",
     "mainMuscleGroup": "CHEST",
     "specificity": "UPPER_CHEST",
+    "importance": 3,
     "limitations": [
       "SHOULDER_ISSUES",
       "ELBOW_PAIN"
@@ -139,6 +151,7 @@
     "type": "WEIGHTLIFTING",
     "mainMuscleGroup": "BACK",
     "specificity": "UPPER_BACK",
+    "importance": 1,
     "limitations": [
       "LOWER_BACK_PAIN",
       "SHOULDER_ISSUES"
@@ -150,6 +163,7 @@
     "type": "WEIGHTLIFTING",
     "mainMuscleGroup": "BACK",
     "specificity": "LATS",
+    "importance": 1,
     "limitations": [
       "LOWER_BACK_PAIN",
       "SHOULDER_ISSUES"
@@ -161,6 +175,7 @@
     "type": "WEIGHTLIFTING",
     "mainMuscleGroup": "LEGS",
     "specificity": "HAMSTRINGS",
+    "importance": 1,
     "limitations": [
       "LOWER_BACK_PAIN",
       "HIP_PAIN"
@@ -172,6 +187,7 @@
     "type": "WEIGHTLIFTING",
     "mainMuscleGroup": "ARMS",
     "specificity": "TRICEPS",
+    "importance": 1,
     "limitations": [
       "ELBOW_PAIN",
       "WRIST_PAIN"
@@ -183,6 +199,7 @@
     "type": "WEIGHTLIFTING",
     "mainMuscleGroup": "SHOULDERS",
     "specificity": "SIDE_DELTS",
+    "importance": 2,
     "limitations": [
       "SHOULDER_ISSUES"
     ]
@@ -193,6 +210,7 @@
     "type": "WEIGHTLIFTING",
     "mainMuscleGroup": "BACK",
     "specificity": "UPPER_BACK",
+    "importance": 2,
     "limitations": [
       "LOWER_BACK_PAIN",
       "SHOULDER_ISSUES"
@@ -204,6 +222,7 @@
     "type": "WEIGHTLIFTING",
     "mainMuscleGroup": "CHEST",
     "specificity": "UPPER_CHEST",
+    "importance": 1,
     "limitations": [
       "SHOULDER_ISSUES",
       "ELBOW_PAIN"
@@ -215,6 +234,7 @@
     "type": "WEIGHTLIFTING",
     "mainMuscleGroup": "LEGS",
     "specificity": "HAMSTRINGS",
+    "importance": 2,
     "limitations": [
       "KNEE_PAIN"
     ]
@@ -225,6 +245,7 @@
     "type": "WEIGHTLIFTING",
     "mainMuscleGroup": "LEGS",
     "specificity": "QUADS",
+    "importance": 2,
     "limitations": [
       "KNEE_PAIN"
     ]
@@ -235,6 +256,7 @@
     "type": "WEIGHTLIFTING",
     "mainMuscleGroup": "LEGS",
     "specificity": "QUADS",
+    "importance": 2,
     "limitations": [
       "KNEE_PAIN",
       "ANKLE_INJURY",
@@ -247,6 +269,7 @@
     "type": "WEIGHTLIFTING",
     "mainMuscleGroup": "ARMS",
     "specificity": "BICEPS",
+    "importance": 3,
     "limitations": [
       "ELBOW_PAIN"
     ]
@@ -257,6 +280,7 @@
     "type": "WEIGHTLIFTING",
     "mainMuscleGroup": "ARMS",
     "specificity": "TRICEPS",
+    "importance": 2,
     "limitations": [
       "SHOULDER_ISSUES"
     ]
@@ -267,6 +291,7 @@
     "type": "WEIGHTLIFTING",
     "mainMuscleGroup": "CHEST",
     "specificity": "LOWER_CHEST",
+    "importance": 1,
     "limitations": [
       "SHOULDER_ISSUES"
     ]
@@ -277,6 +302,7 @@
     "type": "WEIGHTLIFTING",
     "mainMuscleGroup": "SHOULDERS",
     "specificity": "REAR_DELTS",
+    "importance": 3,
     "limitations": [
       "SHOULDER_ISSUES"
     ]
@@ -287,6 +313,7 @@
     "type": "WEIGHTLIFTING",
     "mainMuscleGroup": "TRAPS",
     "specificity": "TRAPS",
+    "importance": 1,
     "limitations": [
       "NECK_PAIN"
     ]
@@ -297,6 +324,7 @@
     "type": "WEIGHTLIFTING",
     "mainMuscleGroup": "CHEST",
     "specificity": "LOWER_CHEST",
+    "importance": 3,
     "limitations": [
       "SHOULDER_ISSUES"
     ]
@@ -307,6 +335,7 @@
     "type": "WEIGHTLIFTING",
     "mainMuscleGroup": "SHOULDERS",
     "specificity": "FRONT_DELTS",
+    "importance": 3,
     "limitations": [
       "SHOULDER_ISSUES"
     ]
@@ -317,6 +346,7 @@
     "type": "WEIGHTLIFTING",
     "mainMuscleGroup": "LEGS",
     "specificity": "QUADS",
+    "importance": 3,
     "limitations": [
       "KNEE_PAIN",
       "ANKLE_INJURY",
@@ -329,6 +359,7 @@
     "type": "WEIGHTLIFTING",
     "mainMuscleGroup": "CHEST",
     "specificity": "UPPER_CHEST",
+    "importance": 3,
     "limitations": [
       "SHOULDER_ISSUES"
     ]
@@ -339,6 +370,7 @@
     "type": "WEIGHTLIFTING",
     "mainMuscleGroup": "CHEST",
     "specificity": "INNER_CHEST",
+    "importance": 2,
     "limitations": [
       "SHOULDER_ISSUES"
     ]
@@ -349,21 +381,10 @@
     "type": "WEIGHTLIFTING",
     "mainMuscleGroup": "LEGS",
     "specificity": "QUADS",
+    "importance": 3,
     "limitations": [
       "KNEE_PAIN",
       "ANKLE_INJURY"
-    ]
-  },
-  {
-    "name": "Reverse Lunge",
-    "difficulty": 1,
-    "type": "WEIGHTLIFTING",
-    "mainMuscleGroup": "LEGS",
-    "specificity": "GLUTES",
-    "limitations": [
-      "KNEE_PAIN",
-      "ANKLE_INJURY",
-      "HIP_PAIN"
     ]
   },
   {
@@ -372,6 +393,7 @@
     "type": "WEIGHTLIFTING",
     "mainMuscleGroup": "ARMS",
     "specificity": "BICEPS",
+    "importance": 2,
     "limitations": [
       "ELBOW_PAIN"
     ]
@@ -382,6 +404,7 @@
     "type": "WEIGHTLIFTING",
     "mainMuscleGroup": "CHEST",
     "specificity": "UPPER_CHEST",
+    "importance": 1,
     "limitations": [
       "SHOULDER_ISSUES",
       "ELBOW_PAIN"
@@ -393,6 +416,7 @@
     "type": "WEIGHTLIFTING",
     "mainMuscleGroup": "BACK",
     "specificity": "UPPER_BACK",
+    "importance": 1,
     "limitations": [
       "LOWER_BACK_PAIN",
       "SHOULDER_ISSUES"
@@ -404,6 +428,7 @@
     "type": "WEIGHTLIFTING",
     "mainMuscleGroup": "LEGS",
     "specificity": "HAMSTRINGS",
+    "importance": 3,
     "limitations": [
       "LOWER_BACK_PAIN",
       "HIP_PAIN"
@@ -415,8 +440,9 @@
     "type": "WEIGHTLIFTING",
     "mainMuscleGroup": "ARMS",
     "specificity": "FOREARMS",
+    "importance": 1,
     "limitations": [
-      "ELBOW_PAIN"
+      "WRIST_PAIN"
     ]
   },
   {
@@ -425,6 +451,7 @@
     "type": "WEIGHTLIFTING",
     "mainMuscleGroup": "LEGS",
     "specificity": "GLUTES",
+    "importance": 1,
     "limitations": [
       "HIP_PAIN"
     ]
@@ -435,6 +462,7 @@
     "type": "WEIGHTLIFTING",
     "mainMuscleGroup": "LEGS",
     "specificity": "ADDUCTORS",
+    "importance": 1,
     "limitations": [
       "HIP_PAIN"
     ]
@@ -445,6 +473,7 @@
     "type": "WEIGHTLIFTING",
     "mainMuscleGroup": "LEGS",
     "specificity": "ABDUCTORS",
+    "importance": 1,
     "limitations": [
       "HIP_PAIN"
     ]
@@ -455,6 +484,7 @@
     "type": "WEIGHTLIFTING",
     "mainMuscleGroup": "LEGS",
     "specificity": "CALVES",
+    "importance": 1,
     "limitations": [
       "ANKLE_INJURY"
     ]
@@ -465,6 +495,7 @@
     "type": "CARDIO",
     "mainMuscleGroup": "FULL_BODY",
     "specificity": "CARDIO",
+    "importance": 1,
     "limitations": [
       "ANKLE_INJURY",
       "KNEE_PAIN"
@@ -476,6 +507,7 @@
     "type": "CARDIO",
     "mainMuscleGroup": "FULL_BODY",
     "specificity": "CARDIO",
+    "importance": 1,
     "limitations": [
       "KNEE_PAIN",
       "HIP_PAIN",
@@ -488,6 +520,7 @@
     "type": "CARDIO",
     "mainMuscleGroup": "LEGS",
     "specificity": "QUADS",
+    "importance": 1,
     "limitations": [
       "KNEE_PAIN"
     ]
@@ -498,6 +531,7 @@
     "type": "CARDIO",
     "mainMuscleGroup": "BACK",
     "specificity": "UPPER_BACK",
+    "importance": 1,
     "limitations": [
       "LOWER_BACK_PAIN",
       "SHOULDER_ISSUES"
@@ -509,6 +543,7 @@
     "type": "CARDIO",
     "mainMuscleGroup": "LEGS",
     "specificity": "QUADS",
+    "importance": 1,
     "limitations": [
       "KNEE_PAIN"
     ]
@@ -519,6 +554,7 @@
     "type": "CARDIO",
     "mainMuscleGroup": "FULL_BODY",
     "specificity": "CARDIO",
+    "importance": 1,
     "limitations": [
       "NONE"
     ]
@@ -529,6 +565,7 @@
     "type": "CARDIO",
     "mainMuscleGroup": "LEGS",
     "specificity": "QUADS",
+    "importance": 1,
     "limitations": [
       "KNEE_PAIN"
     ]
@@ -539,6 +576,7 @@
     "type": "CARDIO",
     "mainMuscleGroup": "LEGS",
     "specificity": "CARDIO",
+    "importance": 1,
     "limitations": [
       "ANKLE_INJURY",
       "KNEE_PAIN"
@@ -550,6 +588,7 @@
     "type": "YOGA",
     "mainMuscleGroup": "FULL_BODY",
     "specificity": "FLEXIBILITY",
+    "importance": 1,
     "limitations": [
       "WRIST_PAIN"
     ]
@@ -560,6 +599,7 @@
     "type": "YOGA",
     "mainMuscleGroup": "LEGS",
     "specificity": "FLEXIBILITY",
+    "importance": 1,
     "limitations": [
       "KNEE_PAIN"
     ]
@@ -570,6 +610,7 @@
     "type": "YOGA",
     "mainMuscleGroup": "LEGS",
     "specificity": "BALANCE",
+    "importance": 1,
     "limitations": [
       "ANKLE_INJURY"
     ]
@@ -580,6 +621,7 @@
     "type": "YOGA",
     "mainMuscleGroup": "BACK",
     "specificity": "FLEXIBILITY",
+    "importance": 1,
     "limitations": [
       "NONE"
     ]
@@ -590,6 +632,7 @@
     "type": "YOGA",
     "mainMuscleGroup": "CORE",
     "specificity": "ABS",
+    "importance": 1,
     "limitations": [
       "WRIST_PAIN",
       "SHOULDER_ISSUES"
@@ -601,6 +644,7 @@
     "type": "YOGA",
     "mainMuscleGroup": "LEGS",
     "specificity": "GLUTES",
+    "importance": 1,
     "limitations": [
       "LOWER_BACK_PAIN"
     ]
@@ -611,6 +655,7 @@
     "type": "YOGA",
     "mainMuscleGroup": "LEGS",
     "specificity": "HAMSTRINGS",
+    "importance": 1,
     "limitations": [
       "NONE"
     ]
@@ -621,6 +666,7 @@
     "type": "YOGA",
     "mainMuscleGroup": "FULL_BODY",
     "specificity": "FLEXIBILITY",
+    "importance": 1,
     "limitations": [
       "NONE"
     ]
@@ -631,6 +677,7 @@
     "type": "STRETCHING",
     "mainMuscleGroup": "BACK",
     "specificity": "FLEXIBILITY",
+    "importance": 1,
     "limitations": [
       "LOWER_BACK_PAIN"
     ]
@@ -641,6 +688,7 @@
     "type": "STRETCHING",
     "mainMuscleGroup": "LEGS",
     "specificity": "FLEXIBILITY",
+    "importance": 1,
     "limitations": [
       "NONE"
     ]
@@ -651,6 +699,7 @@
     "type": "STRETCHING",
     "mainMuscleGroup": "LEGS",
     "specificity": "FLEXIBILITY",
+    "importance": 1,
     "limitations": [
       "KNEE_PAIN"
     ]
@@ -661,6 +710,7 @@
     "type": "STRETCHING",
     "mainMuscleGroup": "SHOULDERS",
     "specificity": "FLEXIBILITY",
+    "importance": 1,
     "limitations": [
       "SHOULDER_ISSUES"
     ]
@@ -671,6 +721,7 @@
     "type": "STRETCHING",
     "mainMuscleGroup": "LEGS",
     "specificity": "FLEXIBILITY",
+    "importance": 1,
     "limitations": [
       "HIP_PAIN"
     ]
@@ -681,6 +732,7 @@
     "type": "STRETCHING",
     "mainMuscleGroup": "LEGS",
     "specificity": "FLEXIBILITY",
+    "importance": 1,
     "limitations": [
       "NONE"
     ]
@@ -691,6 +743,7 @@
     "type": "HIIT",
     "mainMuscleGroup": "CORE",
     "specificity": "CARDIO",
+    "importance": 1,
     "limitations": [
       "WRIST_PAIN",
       "ANKLE_INJURY"
@@ -702,6 +755,7 @@
     "type": "HIIT",
     "mainMuscleGroup": "FULL_BODY",
     "specificity": "CARDIO",
+    "importance": 1,
     "limitations": [
       "KNEE_PAIN",
       "ANKLE_INJURY"
@@ -713,6 +767,7 @@
     "type": "HIIT",
     "mainMuscleGroup": "LEGS",
     "specificity": "QUADS",
+    "importance": 1,
     "limitations": [
       "KNEE_PAIN",
       "ANKLE_INJURY"
@@ -724,6 +779,7 @@
     "type": "HIIT",
     "mainMuscleGroup": "LEGS",
     "specificity": "CARDIO",
+    "importance": 1,
     "limitations": [
       "KNEE_PAIN",
       "ANKLE_INJURY"
@@ -735,6 +791,7 @@
     "type": "HIIT",
     "mainMuscleGroup": "LEGS",
     "specificity": "CARDIO",
+    "importance": 1,
     "limitations": [
       "KNEE_PAIN",
       "ANKLE_INJURY"
@@ -746,6 +803,7 @@
     "type": "GENERAL",
     "mainMuscleGroup": "CORE",
     "specificity": "ABS",
+    "importance": 1,
     "limitations": [
       "NECK_PAIN"
     ]
@@ -756,6 +814,7 @@
     "type": "GENERAL",
     "mainMuscleGroup": "CORE",
     "specificity": "OBLIQUES",
+    "importance": 1,
     "limitations": [
       "LOWER_BACK_PAIN"
     ]
@@ -766,6 +825,7 @@
     "type": "GENERAL",
     "mainMuscleGroup": "CORE",
     "specificity": "ABS",
+    "importance": 1,
     "limitations": [
       "WRIST_PAIN"
     ]
@@ -776,6 +836,7 @@
     "type": "HIIT",
     "mainMuscleGroup": "LEGS",
     "specificity": "QUADS",
+    "importance": 1,
     "limitations": [
       "KNEE_PAIN",
       "ANKLE_INJURY"
@@ -787,6 +848,7 @@
     "type": "WEIGHTLIFTING",
     "mainMuscleGroup": "LEGS",
     "specificity": "QUADS",
+    "importance": 3,
     "limitations": [
       "KNEE_PAIN",
       "ANKLE_INJURY"
@@ -798,6 +860,7 @@
     "type": "GENERAL",
     "mainMuscleGroup": "CORE",
     "specificity": "LOWER_ABS",
+    "importance": 1,
     "limitations": [
       "SHOULDER_ISSUES",
       "WRIST_PAIN"
@@ -809,6 +872,7 @@
     "type": "WEIGHTLIFTING",
     "mainMuscleGroup": "CHEST",
     "specificity": "LOWER_CHEST",
+    "importance": 3,
     "limitations": [
       "SHOULDER_ISSUES"
     ]
@@ -819,6 +883,7 @@
     "type": "GENERAL",
     "mainMuscleGroup": "LEGS",
     "specificity": "GLUTES",
+    "importance": 1,
     "limitations": [
       "HIP_PAIN",
       "KNEE_PAIN"
@@ -830,6 +895,7 @@
     "type": "HIIT",
     "mainMuscleGroup": "ARMS",
     "specificity": "BICEPS",
+    "importance": 1,
     "limitations": [
       "SHOULDER_ISSUES"
     ]
@@ -840,6 +906,7 @@
     "type": "GENERAL",
     "mainMuscleGroup": "FULL_BODY",
     "specificity": "FOREARMS",
+    "importance": 1,
     "limitations": [
       "NONE"
     ]
@@ -850,6 +917,7 @@
     "type": "GENERAL",
     "mainMuscleGroup": "LEGS",
     "specificity": "GLUTES",
+    "importance": 1,
     "limitations": [
       "LOWER_BACK_PAIN",
       "KNEE_PAIN"
@@ -861,6 +929,7 @@
     "type": "WEIGHTLIFTING",
     "mainMuscleGroup": "LEGS",
     "specificity": "GLUTES",
+    "importance": 3,
     "limitations": [
       "LOWER_BACK_PAIN"
     ]
@@ -871,6 +940,7 @@
     "type": "WEIGHTLIFTING",
     "mainMuscleGroup": "SHOULDERS",
     "specificity": "REAR_DELTS",
+    "importance": 1,
     "limitations": [
       "SHOULDER_ISSUES"
     ]
@@ -881,6 +951,7 @@
     "type": "WEIGHTLIFTING",
     "mainMuscleGroup": "LEGS",
     "specificity": "GLUTES",
+    "importance": 2,
     "limitations": [
       "LOWER_BACK_PAIN",
       "HIP_PAIN"
@@ -892,6 +963,7 @@
     "type": "WEIGHTLIFTING",
     "mainMuscleGroup": "ARMS",
     "specificity": "TRICEPS",
+    "importance": 2,
     "limitations": [
       "SHOULDER_ISSUES",
       "ELBOW_PAIN"
@@ -903,6 +975,7 @@
     "type": "WEIGHTLIFTING",
     "mainMuscleGroup": "LEGS",
     "specificity": "QUADS",
+    "importance": 4,
     "limitations": [
       "KNEE_PAIN",
       "ANKLE_INJURY"
@@ -914,6 +987,7 @@
     "type": "WEIGHTLIFTING",
     "mainMuscleGroup": "FULL_BODY",
     "specificity": "GLUTES",
+    "importance": 4,
     "limitations": [
       "SHOULDER_ISSUES",
       "LOWER_BACK_PAIN"
@@ -925,6 +999,7 @@
     "type": "GENERAL",
     "mainMuscleGroup": "CORE",
     "specificity": "ABS",
+    "importance": 2,
     "limitations": [
       "LOWER_BACK_PAIN"
     ]
@@ -935,19 +1010,10 @@
     "type": "GENERAL",
     "mainMuscleGroup": "FULL_BODY",
     "specificity": "CORE",
+    "importance": 4,
     "limitations": [
       "SHOULDER_ISSUES",
       "KNEE_PAIN"
-    ]
-  },
-  {
-    "name": "Windshield Wipers",
-    "difficulty": 2,
-    "type": "GENERAL",
-    "mainMuscleGroup": "CORE",
-    "specificity": "OBLIQUES",
-    "limitations": [
-      "LOWER_BACK_PAIN"
     ]
   },
   {
@@ -956,6 +1022,7 @@
     "type": "GENERAL",
     "mainMuscleGroup": "CHEST",
     "specificity": "UPPER_CHEST",
+    "importance": 2,
     "limitations": [
       "WRIST_PAIN"
     ]
@@ -966,8 +1033,9 @@
     "type": "GENERAL",
     "mainMuscleGroup": "CORE",
     "specificity": "OBLIQUES",
+    "importance": 1,
     "limitations": [
-      "WRIST_PAIN"
+      "SHOULDER_ISSUES"
     ]
   },
   {
@@ -976,6 +1044,7 @@
     "type": "GENERAL",
     "mainMuscleGroup": "LEGS",
     "specificity": "QUADS",
+    "importance": 3,
     "limitations": [
       "KNEE_PAIN",
       "HIP_PAIN"
@@ -987,6 +1056,7 @@
     "type": "STRETCHING",
     "mainMuscleGroup": "LEGS",
     "specificity": "GLUTES",
+    "importance": 1,
     "limitations": [
       "LOWER_BACK_PAIN"
     ]
@@ -997,6 +1067,7 @@
     "type": "GENERAL",
     "mainMuscleGroup": "LEGS",
     "specificity": "QUADS",
+    "importance": 1,
     "limitations": [
       "KNEE_PAIN"
     ]
@@ -1007,6 +1078,7 @@
     "type": "WEIGHTLIFTING",
     "mainMuscleGroup": "LEGS",
     "specificity": "QUADS",
+    "importance": 4,
     "limitations": [
       "KNEE_PAIN",
       "ANKLE_INJURY"
@@ -1018,6 +1090,7 @@
     "type": "WEIGHTLIFTING",
     "mainMuscleGroup": "SHOULDERS",
     "specificity": "SIDE_DELTS",
+    "importance": 1,
     "limitations": [
       "SHOULDER_ISSUES"
     ]
@@ -1028,6 +1101,7 @@
     "type": "GENERAL",
     "mainMuscleGroup": "CORE",
     "specificity": "LOWER_ABS",
+    "importance": 1,
     "limitations": [
       "LOWER_BACK_PAIN"
     ]
@@ -1035,21 +1109,12 @@
   {
     "name": "Glute Kickback",
     "difficulty": 0,
-    "type": "GENERAL",
+    "type": "WEIGHTLIFTING",
     "mainMuscleGroup": "LEGS",
     "specificity": "GLUTES",
+    "importance": 2,
     "limitations": [
       "HIP_PAIN"
-    ]
-  },
-  {
-    "name": "Wide-Grip Pull-up",
-    "difficulty": 2,
-    "type": "WEIGHTLIFTING",
-    "mainMuscleGroup": "BACK",
-    "specificity": "LATS",
-    "limitations": [
-      "SHOULDER_ISSUES"
     ]
   },
   {
@@ -1058,6 +1123,7 @@
     "type": "HIIT",
     "mainMuscleGroup": "FULL_BODY",
     "specificity": "CARDIO",
+    "importance": 1,
     "limitations": [
       "ANKLE_INJURY",
       "KNEE_PAIN"
@@ -1069,6 +1135,7 @@
     "type": "GENERAL",
     "mainMuscleGroup": "BACK",
     "specificity": "UPPER_BACK",
+    "importance": 1,
     "limitations": [
       "LOWER_BACK_PAIN"
     ]
@@ -1078,7 +1145,8 @@
     "difficulty": 1,
     "type": "WEIGHTLIFTING",
     "mainMuscleGroup": "ARMS",
-    "specificity": "BICEPS",
+    "specificity": "FOREARMS",
+    "importance": 2,
     "limitations": [
       "WRIST_PAIN"
     ]
@@ -1089,6 +1157,7 @@
     "type": "GENERAL",
     "mainMuscleGroup": "CORE",
     "specificity": "ABS",
+    "importance": 1,
     "limitations": [
       "SHOULDER_ISSUES"
     ]
@@ -1099,6 +1168,7 @@
     "type": "GENERAL",
     "mainMuscleGroup": "FULL_BODY",
     "specificity": "CORE",
+    "importance": 1,
     "limitations": [
       "SHOULDER_ISSUES",
       "WRIST_PAIN"
@@ -1110,6 +1180,7 @@
     "type": "GENERAL",
     "mainMuscleGroup": "LEGS",
     "specificity": "GLUTES",
+    "importance": 1,
     "limitations": [
       "HIP_PAIN"
     ]
@@ -1120,29 +1191,9 @@
     "type": "GENERAL",
     "mainMuscleGroup": "CORE",
     "specificity": "ABS",
+    "importance": 1,
     "limitations": [
       "WRIST_PAIN"
-    ]
-  },
-  {
-    "name": "Kettlebell Clean",
-    "difficulty": 2,
-    "type": "WEIGHTLIFTING",
-    "mainMuscleGroup": "FULL_BODY",
-    "specificity": "GLUTES",
-    "limitations": [
-      "LOWER_BACK_PAIN"
-    ]
-  },
-  {
-    "name": "Single-Leg Deadlift",
-    "difficulty": 2,
-    "type": "WEIGHTLIFTING",
-    "mainMuscleGroup": "LEGS",
-    "specificity": "HAMSTRINGS",
-    "limitations": [
-      "KNEE_PAIN",
-      "ANKLE_INJURY"
     ]
   },
   {
@@ -1150,7 +1201,8 @@
     "difficulty": 1,
     "type": "CARDIO",
     "mainMuscleGroup": "ARMS",
-    "specificity": "BICEPS",
+    "specificity": "SHOULDERS",
+    "importance": 1,
     "limitations": [
       "SHOULDER_ISSUES"
     ]
@@ -1161,19 +1213,10 @@
     "type": "HIIT",
     "mainMuscleGroup": "LEGS",
     "specificity": "QUADS",
+    "importance": 1,
     "limitations": [
       "KNEE_PAIN",
       "ANKLE_INJURY"
-    ]
-  },
-  {
-    "name": "Kettlebell Deadlift",
-    "difficulty": 0,
-    "type": "WEIGHTLIFTING",
-    "mainMuscleGroup": "LEGS",
-    "specificity": "HAMSTRINGS",
-    "limitations": [
-      "LOWER_BACK_PAIN"
     ]
   },
   {
@@ -1182,6 +1225,7 @@
     "type": "WEIGHTLIFTING",
     "mainMuscleGroup": "FULL_BODY",
     "specificity": "SHOULDERS",
+    "importance": 4,
     "limitations": [
       "SHOULDER_ISSUES",
       "WRIST_PAIN"
@@ -1193,6 +1237,7 @@
     "type": "GENERAL",
     "mainMuscleGroup": "CHEST",
     "specificity": "LOWER_CHEST",
+    "importance": 1,
     "limitations": [
       "WRIST_PAIN"
     ]
@@ -1203,6 +1248,7 @@
     "type": "WEIGHTLIFTING",
     "mainMuscleGroup": "LEGS",
     "specificity": "QUADS",
+    "importance": 4,
     "limitations": [
       "KNEE_PAIN",
       "SHOULDER_ISSUES"
@@ -1214,6 +1260,7 @@
     "type": "HIIT",
     "mainMuscleGroup": "LEGS",
     "specificity": "QUADS",
+    "importance": 1,
     "limitations": [
       "KNEE_PAIN",
       "ANKLE_INJURY"
@@ -1225,6 +1272,7 @@
     "type": "GENERAL",
     "mainMuscleGroup": "FULL_BODY",
     "specificity": "CORE",
+    "importance": 1,
     "limitations": [
       "LOWER_BACK_PAIN"
     ]
@@ -1235,6 +1283,7 @@
     "type": "YOGA",
     "mainMuscleGroup": "FULL_BODY",
     "specificity": "FLEXIBILITY",
+    "importance": 1,
     "limitations": [
       "NONE"
     ]
@@ -1245,6 +1294,7 @@
     "type": "YOGA",
     "mainMuscleGroup": "LEGS",
     "specificity": "FLEXIBILITY",
+    "importance": 1,
     "limitations": [
       "KNEE_PAIN"
     ]
@@ -1255,6 +1305,7 @@
     "type": "YOGA",
     "mainMuscleGroup": "CORE",
     "specificity": "ABS",
+    "importance": 1,
     "limitations": [
       "LOWER_BACK_PAIN"
     ]
@@ -1265,6 +1316,7 @@
     "type": "YOGA",
     "mainMuscleGroup": "BACK",
     "specificity": "FLEXIBILITY",
+    "importance": 1,
     "limitations": [
       "LOWER_BACK_PAIN"
     ]
@@ -1275,6 +1327,7 @@
     "type": "YOGA",
     "mainMuscleGroup": "FULL_BODY",
     "specificity": "FLEXIBILITY",
+    "importance": 1,
     "limitations": [
       "WRIST_PAIN"
     ]
@@ -1285,6 +1338,7 @@
     "type": "YOGA",
     "mainMuscleGroup": "LEGS",
     "specificity": "BALANCE",
+    "importance": 1,
     "limitations": [
       "KNEE_PAIN"
     ]
@@ -1295,6 +1349,7 @@
     "type": "YOGA",
     "mainMuscleGroup": "LEGS",
     "specificity": "FLEXIBILITY",
+    "importance": 1,
     "limitations": [
       "KNEE_PAIN"
     ]
@@ -1305,6 +1360,7 @@
     "type": "YOGA",
     "mainMuscleGroup": "FULL_BODY",
     "specificity": "BALANCE",
+    "importance": 1,
     "limitations": [
       "ANKLE_INJURY"
     ]
@@ -1315,6 +1371,7 @@
     "type": "YOGA",
     "mainMuscleGroup": "LEGS",
     "specificity": "BALANCE",
+    "importance": 1,
     "limitations": [
       "ANKLE_INJURY"
     ]
@@ -1325,6 +1382,7 @@
     "type": "YOGA",
     "mainMuscleGroup": "FULL_BODY",
     "specificity": "RELAXATION",
+    "importance": 1,
     "limitations": [
       "NONE"
     ]
@@ -1335,6 +1393,7 @@
     "type": "YOGA",
     "mainMuscleGroup": "BACK",
     "specificity": "FLEXIBILITY",
+    "importance": 1,
     "limitations": [
       "NECK_PAIN"
     ]
@@ -1345,6 +1404,7 @@
     "type": "YOGA",
     "mainMuscleGroup": "CORE",
     "specificity": "FLEXIBILITY",
+    "importance": 1,
     "limitations": [
       "LOWER_BACK_PAIN"
     ]
@@ -1355,6 +1415,7 @@
     "type": "YOGA",
     "mainMuscleGroup": "FULL_BODY",
     "specificity": "BALANCE",
+    "importance": 1,
     "limitations": [
       "ANKLE_INJURY"
     ]
@@ -1365,6 +1426,7 @@
     "type": "YOGA",
     "mainMuscleGroup": "CORE",
     "specificity": "BALANCE",
+    "importance": 1,
     "limitations": [
       "WRIST_PAIN"
     ]
@@ -1375,6 +1437,7 @@
     "type": "YOGA",
     "mainMuscleGroup": "CORE",
     "specificity": "FLEXIBILITY",
+    "importance": 1,
     "limitations": [
       "KNEE_PAIN"
     ]
@@ -1385,6 +1448,7 @@
     "type": "YOGA",
     "mainMuscleGroup": "LEGS",
     "specificity": "FLEXIBILITY",
+    "importance": 1,
     "limitations": [
       "HIP_PAIN"
     ]
@@ -1395,6 +1459,7 @@
     "type": "YOGA",
     "mainMuscleGroup": "LEGS",
     "specificity": "FLEXIBILITY",
+    "importance": 1,
     "limitations": [
       "HIP_PAIN"
     ]
@@ -1405,6 +1470,7 @@
     "type": "YOGA",
     "mainMuscleGroup": "LEGS",
     "specificity": "FLEXIBILITY",
+    "importance": 1,
     "limitations": [
       "KNEE_PAIN"
     ]
@@ -1415,6 +1481,7 @@
     "type": "YOGA",
     "mainMuscleGroup": "BACK",
     "specificity": "FLEXIBILITY",
+    "importance": 1,
     "limitations": [
       "NECK_PAIN"
     ]
@@ -1425,6 +1492,7 @@
     "type": "YOGA",
     "mainMuscleGroup": "CORE",
     "specificity": "FLEXIBILITY",
+    "importance": 1,
     "limitations": [
       "LOWER_BACK_PAIN"
     ]

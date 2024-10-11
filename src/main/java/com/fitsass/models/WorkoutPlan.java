@@ -22,7 +22,7 @@ public class WorkoutPlan {
     }
 
     public void printWorkoutPlan() {
-        System.out.println("GENERATING WORKOUT PLAN FOR " + userPreference.getName());
+        System.out.println("GENERATING A "+ userPreference.getWeeklyWorkoutFrequency() +" DAY WORKOUT PLAN FOR " + userPreference.getName());
         for (WorkoutSession workoutSession : session) {
             workoutSession.printWorkoutSession();
         }

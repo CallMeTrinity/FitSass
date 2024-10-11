@@ -18,6 +18,8 @@ public class Exercise {
     private WorkoutType type;
     private List<PhysicalLimitations> limitations;
     private double intensity;
+    private int importance;
+
 
     public String getName() {
         return name;
@@ -108,5 +110,13 @@ public class Exercise {
 
     public void setIntensity(double intensity) {
         this.intensity = intensity;
+    }
+
+    public int getImportance() {
+        return importance;
+    }
+
+    public void setImportance(int importance) {
+        this.importance = importance;
     }
 }
