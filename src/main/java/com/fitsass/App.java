@@ -11,7 +11,7 @@ public class App
     {
         Scanner scanner = new Scanner(System.in);
         UserPreference userPreference = new UserPreference(scanner);
-        WorkoutPlan workoutPlan = new WorkoutPlan(userPreference.getWeeklyWorkoutFrequency(), userPreference);
+        WorkoutPlan workoutPlan = new WorkoutPlan(userPreference);
         workoutPlan.generateWorkoutPlan();
 
     }

@@ -13,8 +13,8 @@ public class WorkoutPlan {
     private final UserPreference userPreference;
     List<WorkoutSession> session;
 
-    public WorkoutPlan(int frequency, UserPreference userPreference) {
-        this.frequency = frequency;
+    public WorkoutPlan(UserPreference userPreference) {
+        this.frequency = userPreference.getWeeklyWorkoutFrequency();
         session = new ArrayList<>();
         this.userPreference = userPreference;
         split = getSplitFromFrequency();
@@ -46,7 +46,7 @@ public class WorkoutPlan {
         }
 
         if (matchingSplits.isEmpty()) {
-            return null;
+            return generateCustomSplit(userPreference);
         }
 
         System.out.println("Multiple workout splits are available for the frequency of " + frequency + " days. Please choose one:");
@@ -93,16 +93,8 @@ public class WorkoutPlan {
         ExerciseLoader loader = new ExerciseLoader();
         List<Exercise> exercises = loader.loadExercises();
 
-        Split customSplit = split;
-
-        if (split == null) {
-            System.out.println("No workout split available for this frequency: " + frequency + ". Generating a custom split...");
-
-            customSplit = generateCustomSplit(userPreference);
-        }
-
         for (int i = 1; i <= frequency; i++) {
-            List<MuscleGroup> muscleGroupsForDay = customSplit.getMuscleGroupsPerDay().get(i);
+            List<MuscleGroup> muscleGroupsForDay = split.getMuscleGroupsPerDay().get(i);
             WorkoutSession workoutSession = new WorkoutSession("Day " + i, userPreference.getExercisePreference(), muscleGroupsForDay);
 
             if (muscleGroupsForDay != null && !muscleGroupsForDay.isEmpty()) {
