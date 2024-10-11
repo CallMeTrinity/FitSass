@@ -1,5 +1,19 @@
 # Changelog
 
+## [Unreleased]
+
+##[v0.4.0-alpha] - 2024-10-11
+
+### Added
+
+- Added exercise importance ranking for a better generation of workout plans.
+
+##[v0.3.0-alpha] - 2024-10-10
+
+### Added
+
+- Added unit testing for main functionalities.
+
 ## [v0.2.0-alpha] - 2024-10-10
 
 ### Added
@@ -22,7 +36,9 @@
 - Basic project setup with exercise loader.
 
 
-[unreleased]: https://github.com/CallMeTrinity/FitSass/compare/v0.2.0-alpha...main
+[unreleased]: https://github.com/CallMeTrinity/FitSass/compare/v0.3.0-alpha...main
+[v0.4.0-alpha]: https://github.com/CallMeTrinity/FitSass/compare/v0.3.0-alpha...v0.4.0-alpha
+[v0.3.0-alpha]: https://github.com/CallMeTrinity/FitSass/compare/v0.2.0-alpha...v0.3.0-alpha
 [v0.2.0-alpha]: https://github.com/CallMeTrinity/FitSass/compare/v0.1.0-alpha...v0.2.0-alpha
 [v0.1.0-alpha]: https://github.com/CallMeTrinity/FitSass/compare/v0.0.1-alpha...v0.1.0-alpha
 [v0.0.1-alpha]: https://github.com/CallMeTrinity/FitSass/release/tag/v0.0.1-alpha
