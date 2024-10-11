@@ -16,7 +16,7 @@
             </plugin>
         </plugins>
     </build>
-    <version>v0.1.0-alpha</version>
+    <version>v0.3.0-alpha</version>
     <name>SarcasNess</name>
     <url>http://maven.apache.org</url>
     <dependencies>
@@ -26,10 +26,17 @@
             <version>2.11.0</version>
         </dependency>
         <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>3.8.1</version>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-engine</artifactId>
+            <version>5.2.0</version>
             <scope>test</scope>
         </dependency>
+        <dependency>
+            <groupId>org.junit.platform</groupId>
+            <artifactId>junit-platform-runner</artifactId>
+            <version>1.2.0</version>
+            <scope>test</scope>
+        </dependency>
+
     </dependencies>
 </project>
