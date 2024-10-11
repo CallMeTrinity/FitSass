@@ -123,6 +123,7 @@ public class WorkoutSession {
             if (muscleGroup == MuscleGroup.FULL_BODY) {
                 for (Muscle muscle : muscleGroup.getMuscles()) {
                     List<Exercise> muscleSpecificExercises = muscleExerciseMap.get(muscle);
+                    muscleSpecificExercises.sort(Comparator.comparingInt(Exercise::getImportance));
 
                     if (!muscleSpecificExercises.isEmpty()) {
                         Exercise selectedExercise = muscleSpecificExercises.removeFirst();
@@ -138,6 +139,7 @@ public class WorkoutSession {
 
                     for (Muscle muscle : muscleGroup.getMuscles()) {
                         List<Exercise> muscleSpecificExercises = muscleExerciseMap.get(muscle);
+                        muscleSpecificExercises.sort(Comparator.comparingInt(Exercise::getImportance));
                         if (!muscleSpecificExercises.isEmpty() && exercisesAdded < numberOfExercises) {
                             Exercise selectedExercise = muscleSpecificExercises.removeFirst();
                             selectedExercise.setReps(reps);
