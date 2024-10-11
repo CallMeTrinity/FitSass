@@ -80,6 +80,35 @@
     }
   },
   {
+    "name": "TENNINSON_SPLIT",
+    "description": "5 days : Derivated from the Arnold split, with a focus on chest, back, shoulders, arms, and legs.",
+    "days": 5,
+    "workoutType": "WEIGHTLIFTING",
+    "muscleGroupsPerDay": {
+      "1": [
+        "CHEST",
+        "BACK"
+      ],
+      "2": [
+        "ARMS",
+        "SHOULDERS"
+      ],
+      "3": [
+        "LEGS",
+        "SHOULDERS"
+      ],
+      "4": [
+        "CHEST",
+        "BACK",
+        "ARMS"
+      ],
+      "5": [
+        "LEGS",
+        "ARMS"
+      ]
+    }
+  },
+  {
     "name": "PUSH_PULL_LEGS_3_DAYS",
     "description": "3 days: A 3-day Push-Pull-Legs split for those with a limited schedule.",
     "days": 3,
