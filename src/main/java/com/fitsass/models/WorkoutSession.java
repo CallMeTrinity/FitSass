@@ -41,17 +41,17 @@ public class WorkoutSession {
         this.type = type;
     }
 
-    public void adjustDifficulty(UserPreference userPreference) {
-        if (userPreference.getExperienceLevel() <= 1) {
+    public void adjustDifficulty(UserPreferenceData userPreferenceData) {
+        if (userPreferenceData.getExperienceLevel() <= 1) {
             difficulty = 0;
-        } else if (userPreference.getExperienceLevel() <= 3) {
+        } else if (userPreferenceData.getExperienceLevel() <= 3) {
             difficulty = 1;
         } else {
             difficulty = 2;
         }
     }
 
-    public void generateSession(int numberOfExercises, List<Exercise> exercises, UserPreference userPreference) {
+    public void generateSession(int numberOfExercises, List<Exercise> exercises, UserPreferenceData userPreferenceData) {
         int reps = 0;
         int sets = 0;
         double intensity = 0.0;
@@ -96,13 +96,13 @@ public class WorkoutSession {
                 muscleExerciseMap.put(muscle, new ArrayList<>());
             }
 
-            adjustDifficulty(userPreference);
+            adjustDifficulty(userPreferenceData);
 
             for (Exercise exercise : exercises) {
                 if (((exercise.getMainMuscleGroup().equals(muscleGroup) || muscleGroup.equals(MuscleGroup.FULL_BODY)) && muscleExerciseMap.containsKey(exercise.getSpecificity())) && exercise.getDifficulty() <= difficulty && exercise.getType().equals(type)) {
                     boolean isLimited = false;
 
-                    for (PhysicalLimitations userLimitation : userPreference.getPhysicalLimitations()) {
+                    for (PhysicalLimitations userLimitation : userPreferenceData.getPhysicalLimitations()) {
                         if (exercise.getLimitations().contains(userLimitation)) {
                             isLimited = true;
                             break;
@@ -159,6 +159,13 @@ public class WorkoutSession {
         return exercises;
     }
 
+    public String getName() {
+        return name;
+    }
+
+    public List<MuscleGroup> getMuscleGroups() {
+        return muscleGroups;
+    }
 
     public int getDifficulty() {
         return difficulty;

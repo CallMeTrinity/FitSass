@@ -278,4 +278,17 @@ public class UserPreference {
     public void setPhysicalLimitations(List<PhysicalLimitations> physicalLimitations) {
         this.physicalLimitations = physicalLimitations;
     }
+
+    public UserPreferenceData toUserPreferenceData() {
+        return new UserPreferenceData(
+            name,
+            experienceLevel,
+            weeklyWorkoutFrequency,
+            goal,
+            exercisePreference,
+            physicalLimitations,
+            currentWeight,
+            height
+        );
+    }
 }
